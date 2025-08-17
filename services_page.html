@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>All Services — DF IT CENTRE</title>
+  <meta name="description" content="Browse all services by DF IT CENTRE — Social media security, solutions, marketing, web/software and cybersecurity."/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07080b; --text:#e8ecf6; --muted:#9aa3b2; --primary:#7c5cff; --accent:#00d2ff;
+      --card:#0c111b; --border:#151a24; --radius:14px;
+      --grad: linear-gradient(120deg, #7c5cff, #00d2ff 60%, #23f0c7);
+      --shadow:0 10px 30px rgba(0,0,0,.35), 0 0 60px #7c5cff22, 0 0 80px #00d2ff16;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text); background:
+      radial-gradient(1200px 600px at 80% -10%, #1a1030 0%, transparent 60%),
+      radial-gradient(1000px 400px at -10% 10%, #0b1c2a 0%, transparent 50%), var(--bg);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; line-height:1.6; overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{width:min(1200px,92%); margin-inline:auto}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:60; background:linear-gradient(180deg,rgba(7,8,11,.9),rgba(7,8,11,.65)); backdrop-filter:blur(8px); border-bottom:1px solid var(--border)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.4px}
+    .brand span{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; font-family:"Space Grotesk"; font-size:18px}
+    .logo-img{width:34px;height:34px;display:block;border-radius:10px;object-fit:contain;background:#0a0f18;padding:2px;box-shadow:0 0 30px #7c5cff66,0 0 80px #00d2ff33}
+
+    .menu{display:flex; align-items:center; gap:22px}
+    .menu>li{list-style:none; position:relative}
+    .menu a,.menu button{background:none;border:0;color:#cfd5e3;font-weight:500;cursor:pointer;padding:8px 6px}
+    .menu a:hover,.menu button:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #253049;background:linear-gradient(180deg,#121827,#0d1220);color:#e9ecf4;box-shadow:var(--shadow);cursor:pointer}
+    .btn-primary{background: radial-gradient(60% 120% at 20% 20%, #7c5cff 0, #6e43ff 35%, #00a9ff 100%); border:0; color:#fff}
+    .mobile-toggle{display:none}
+
+    /* Mega menu */
+    .has-mega>.mega{
+      position:absolute; left:50%; transform:translateX(-50%); top:130%;
+      width:min(980px,92vw); display:none; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;
+      background:linear-gradient(180deg,#0b101a,#0a0f18); border:1px solid #1d2535; border-radius:16px; padding:18px; box-shadow:var(--shadow); z-index:70
+    }
+    .has-mega:hover>.mega{display:grid}
+    .mega .col{background:linear-gradient(180deg,#0e1422,#0c111b);border:1px solid #1b2333;border-radius:12px;padding:14px}
+    .mega h4{margin:6px 0 8px; font-family:"Space Grotesk"; font-size:15px; color:#eaf0ff}
+    .mega ul{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+    .mega a{color:#b9c2d3; font-size:14px}
+    @media (max-width:980px){
+      .menu{display:none; position:absolute; right:4%; top:62px; flex-direction:column; gap:12px; padding:14px; background:#0a0f18; border:1px solid #1d2535; border-radius:12px; width:min(92vw,520px)}
+      .mobile-toggle{display:inline-flex}
+      .has-mega>.mega{position:static; transform:none; width:100%; display:none; margin-top:8px}
+      .has-mega.open>.mega{display:grid}
+    }
+
+    /* Hero */
+    .hero{padding:72px 0 28px; border-bottom:1px solid var(--border)}
+    .crumb{color:#a8b2c6; font-size:14px}
+    .title{font-family:"Space Grotesk"; font-weight:700; font-size:clamp(34px,5vw,56px); margin:10px 0}
+    .lead{color:#c6cfdd; max-width:70ch}
+
+    /* Filters */
+    section{padding:68px 0}
+    .toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .search{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;background:#0d1322;border:1px solid #253049;color:#e8ecf6;min-width:260px}
+    .search input{background:transparent;border:0;outline:0;color:#e8ecf6;min-width:200px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid #263049;background:#0d1322;border-radius:999px;padding:8px 12px;color:#cfd5e3;cursor:pointer}
+    .chip.active{background:linear-gradient(90deg,#7c5cff,#00d2ff);color:#fff;border-color:transparent}
+    .count{color:#9fb0c8;font-weight:600}
+
+    /* Service grid/cards */
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .svc-card{
+      background:linear-gradient(180deg,#0e1422,#0c111b);
+      border:1px solid var(--border);border-radius:14px;padding:18px;
+      display:flex;gap:14px;align-items:flex-start;transition:transform .18s ease,border-color .18s;
+    }
+    .svc-card:hover{transform:translateY(-2px);border-color:#263049}
+    .svc-ico{
+      flex:0 0 48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;
+      background: radial-gradient(circle at 40% 40%, var(--c,#7c5cff), #0ea5e9);
+      box-shadow:0 10px 30px #0005,inset 0 0 30px #ffffff22
+    }
+    .svc-ico i{font-size:22px}
+    .svc-body{flex:1 1 auto}
+    .svc-cat{font-size:12px;color:#9fb0c8;text-transform:uppercase;letter-spacing:.12em}
+    .svc-title{margin:4px 0 6px;font-weight:700}
+    .svc-desc{color:#a8b2c6;font-size:14px}
+    .svc-link{display:inline-flex;align-items:center;gap:6px;margin-top:6px}
+    .svc-link i{font-size:16px}
+    @media (max-width: 1100px){ .grid-4{grid-template-columns:repeat(3,1fr)} }
+    @media (max-width: 780px){ .grid-4{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width: 520px){ .grid-4{grid-template-columns:1fr} }
+
+    /* Footer (big + centered) */
+    footer{ padding:64px 0; border-top:1px solid var(--border) }
+    .footer-wrap{display:grid;gap:22px;justify-items:center;text-align:center}
+    .footer-title{
+      margin:0;font-family:"Space Grotesk";font-weight:700;
+      font-size:clamp(24px, 3.2vw, 32px);
+      background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+      letter-spacing:.2px;
+    }
+    .footer-social{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+    .footer-social a.ic{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 16px;border-radius:999px;
+      background:#0d1322;border:1px solid #253049;color:#cfd5e3;
+      transition:all .2s ease;font-weight:600
+    }
+    .footer-social a.ic i{font-size:22px}
+    .footer-social a.ic:hover{transform:translateY(-2px)}
+    .footer-social a.ic.fb:hover{background:linear-gradient(90deg,#3b82f6,#2563eb);color:#fff;border-color:transparent}
+    .footer-social a.ic.group:hover{background:linear-gradient(90deg,#3b82f6,#1e40af);color:#fff;border-color:transparent}
+    .footer-social a.ic.ig:hover{background:linear-gradient(60deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);color:#fff;border-color:transparent}
+    .footer-social a.ic.in:hover{background:linear-gradient(90deg,#0A66C2,#004182);color:#fff;border-color:transparent}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;color:#9aa3b2}
+    @media (max-width:520px){ .footer-social a.ic span{display:none} }
+
+    .reveal{opacity:.01; transform:translateY(16px); transition:transform .7s ease, opacity .7s ease}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html#home">
+      <img src="logo.png" alt="DF IT CENTRE logo" class="logo-img" width="34" height="34" decoding="async">
+      <span>DF IT CENTRE</span>
+    </a>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+
+      <li class="has-mega" id="servicesItem">
+        <button type="button" aria-expanded="false">Services <i class="ri-arrow-down-s-line"></i></button>
+        <div class="mega" id="mega">
+          <div class="col">
+            <h4>Social Media Security</h4>
+            <ul>
+              <li><a href="service.html?slug=hacked-facebook-page-recovery">Hacked Facebook Page Recovery</a></li>
+              <li><a href="service.html?slug=hacked-facebook-account-recovery">Hacked Facebook Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-instagram-account-recovery">Hacked Instagram Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-youtube-channel-recovery">Hacked YouTube Channel Recovery</a></li>
+              <li><a href="service.html?slug=hacked-google-account-recovery">Hacked Google Account Recovery</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Social Media Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=fake-copyright-claim-restore">Fake Copyright Claim Restore</a></li>
+              <li><a href="service.html?slug=suspended-page-recovery">Suspended Page Recovery</a></li>
+              <li><a href="service.html?slug=business-manager-verification">Business Manager Verification</a></li>
+              <li><a href="service.html?slug=page-verification-badge">Page Verification (Blue/Gray Badge)</a></li>
+              <li><a href="service.html?slug=copyright-trademark-restore">Copyright + Trademark Restore</a></li>
+              <li><a href="service.html?slug=notable-permanent-blue-verification">Notable / Permanent Blue Verification</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Digital Marketing</h4>
+            <ul>
+              <li><a href="service.html?slug=instagram-marketing">Instagram Marketing</a></li>
+              <li><a href="service.html?slug=facebook-marketing">Facebook Marketing</a></li>
+              <li><a href="service.html?slug=youtube-marketing">YouTube Marketing</a></li>
+            </ul>
+
+            <h4 style="margin-top:12px">Web & Software Design & Development</h4>
+            <ul>
+              <li><a href="service.html?slug=responsive-website-design">Responsive Website Design</a></li>
+              <li><a href="service.html?slug=custom-web-applications">Custom Web Applications</a></li>
+              <li><a href="service.html?slug=software-development-erp-crm">Software Development (ERP, CRM, Business Tools)</a></li>
+              <li><a href="service.html?slug=mobile-app-development">Mobile App Development (Android / iOS / Cross‑platform)</a></li>
+              <li><a href="service.html?slug=ui-ux-design-prototyping">UI/UX Design & Prototyping</a></li>
+            </ul>
+
+            <h4 style="margin-top:12px">Cybersecurity Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=network-security-penetration-testing">Network Security & Penetration Testing</a></li>
+              <li><a href="service.html?slug=web-app-security-audits">Web & App Security Audits</a></li>
+              <li><a href="service.html?slug=malware-threat-detection">Malware & Threat Detection</a></li>
+              <li><a href="service.html?slug=data-protection-compliance">Data Protection & Compliance</a></li>
+              <li><a href="service.html?slug=secure-hosting-maintenance">Secure Hosting & Maintenance</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a class="btn btn-primary" href="index.html#get-started"><i class="ri-arrow-right-up-line"></i> Get Started</a></li>
+    </ul>
+
+    <button class="mobile-toggle btn" aria-label="Toggle menu" id="mobileToggle"><i class="ri-menu-3-line"></i></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container reveal">
+    <div class="crumb"><a href="index.html#home">Home</a> / <span>Services</span></div>
+    <h1 class="title">All <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">Services</span></h1>
+    <p class="lead">Browse everything we offer — security, recovery, solutions, marketing, web & software, and cybersecurity. Use the search and filters to find what you need.</p>
+  </div>
+</div>
+
+<!-- Filters + Grid -->
+<section>
+  <div class="container">
+    <div class="toolbar reveal">
+      <div class="search">
+        <i class="ri-search-line"></i>
+        <input id="svcSearch" type="search" placeholder="Search services…">
+      </div>
+      <div class="chips" id="svcChips" role="tablist" aria-label="Filter by category"></div>
+      <div class="count" id="svcCount"></div>
+    </div>
+
+    <div id="svcGrid" class="grid-4 reveal" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container footer-wrap">
+    <h3 class="footer-title">Follow DF IT CENTRE</h3>
+    <nav class="footer-social" aria-label="Social links">
+      <a class="ic fb" href="https://facebook.com/YourPage" target="_blank" rel="noopener"><i class="ri-facebook-fill"></i><span>Facebook Page</span></a>
+      <a class="ic group" href="https://facebook.com/groups/YourGroup" target="_blank" rel="noopener"><i class="ri-group-line"></i><span>FB Group</span></a>
+      <a class="ic ig" href="https://instagram.com/YourHandle" target="_blank" rel="noopener"><i class="ri-instagram-line"></i><span>Instagram</span></a>
+      <a class="ic in" href="https://www.linkedin.com/company/YourCompany" target="_blank" rel="noopener"><i class="ri-linkedin-fill"></i><span>LinkedIn</span></a>
+    </nav>
+    <div class="footer-bottom">
+      <div>Copyright © 2025 DF IT CENTRE. All rights reserved.</div>
+      <div><a href="#">Terms of Use</a> · <a href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  (function(){
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+    const servicesItem = document.getElementById('servicesItem');
+    toggle?.addEventListener('click', ()=>{
+      const show = getComputedStyle(menu).display === 'none';
+      menu.style.display = show ? 'flex' : 'none';
+      toggle.innerHTML = show ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>';
+    });
+    servicesItem?.querySelector('button')?.addEventListener('click', (e)=>{
+      if (window.innerWidth > 980) return;
+      servicesItem.classList.toggle('open');
+      e.currentTarget.setAttribute('aria-expanded', servicesItem.classList.contains('open'));
+    });
+    window.addEventListener('resize', ()=>{ if (window.innerWidth > 980){ menu.style.display=''; servicesItem.classList.remove('open'); }});
+  })();
+
+  // Reveal
+  const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target)}}),{threshold:.2});
+  document.querySelectorAll('.reveal, section .container').forEach(el=>io.observe(el));
+
+  // Categories
+  const CATS = [
+    {k:'security', name:'Social Media Security'},
+    {k:'solutions', name:'Social Media Solutions'},
+    {k:'marketing', name:'Digital Marketing'},
+    {k:'webdev',   name:'Web & Software Design & Development'},
+    {k:'cyber',    name:'Cybersecurity Solutions'}
+  ];
+
+  // All services
+  const SERVICES = [
+    // Social Media Security
+    {t:"Hacked Facebook Page Recovery",       s:"hacked-facebook-page-recovery",       k:"security",  i:"ri-facebook-circle-fill",  col:"#2563eb", d:"Restore ownership and fix hacked Facebook Pages safely."},
+    {t:"Hacked Facebook Account Recovery",    s:"hacked-facebook-account-recovery",    k:"security",  i:"ri-facebook-circle-fill",  col:"#2563eb", d:"Regain your Facebook account with clean sessions and 2FA."},
+    {t:"Hacked Instagram Account Recovery",   s:"hacked-instagram-account-recovery",   k:"security",  i:"ri-instagram-line",        col:"#e1306c", d:"Secure recovery for IG accounts with identity validation."},
+    {t:"Hacked YouTube Channel Recovery",     s:"hacked-youtube-channel-recovery",     k:"security",  i:"ri-youtube-fill",          col:"#e11d1d", d:"Channel access restore, Google security and hardening."},
+    {t:"Hacked Google Account Recovery",      s:"hacked-google-account-recovery",      k:"security",  i:"ri-google-fill",           col:"#34a853", d:"Recover Gmail/Workspace accounts and enable strong 2‑step."},
+
+    // Social Media Solutions
+    {t:"Fake Copyright Claim Restore",        s:"fake-copyright-claim-restore",        k:"solutions", i:"ri-copyright-line",        col:"#7c5cff", d:"Evidence‑backed appeals to remove false copyright claims."},
+    {t:"Suspended Page Recovery",             s:"suspended-page-recovery",             k:"solutions", i:"ri-shield-keyhole-line",   col:"#00d2ff", d:"Policy‑aligned appeals to lift unfair restrictions."},
+    {t:"Business Manager Verification",       s:"business-manager-verification",       k:"solutions", i:"ri-building-4-line",       col:"#00bcd4", d:"End‑to‑end guidance for Business Manager verification."},
+    {t:"Page Verification (Blue/Gray Badge)", s:"page-verification-badge",             k:"solutions", i:"ri-verified-badge-line",   col:"#2dd4bf", d:"Eligibility checks and application support for badges."},
+    {t:"Copyright + Trademark Restore",       s:"copyright-trademark-restore",         k:"solutions", i:"ri-file-shield-2-line",    col:"#6ee7b7", d:"Protect your IP: takedowns, reinstatements, impersonation."},
+    {t:"Notable / Permanent Blue Verification",s:"notable-permanent-blue-verification", k:"solutions", i:"ri-medal-2-line",          col:"#60a5fa", d:"Plan and apply for notable, permanent blue verification."},
+
+    // Digital Marketing
+    {t:"Instagram Marketing",                 s:"instagram-marketing",                 k:"marketing", i:"ri-instagram-line",        col:"#e1306c", d:"Strategy, content and ads for IG growth and conversions."},
+    {t:"Facebook Marketing",                  s:"facebook-marketing",                  k:"marketing", i:"ri-facebook-circle-fill",  col:"#2563eb", d:"ROI‑focused campaigns with pixel/CAPI tracking."},
+    {t:"YouTube Marketing",                   s:"youtube-marketing",                   k:"marketing", i:"ri-youtube-fill",          col:"#e11d1d", d:"Channel optimization, thumbnails and ads."},
+
+    // Web & Software
+    {t:"Responsive Website Design",           s:"responsive-website-design",           k:"webdev",    i:"ri-global-line",           col:"#7c5cff", d:"Fast, responsive sites with clean UX and on‑page SEO."},
+    {t:"Custom Web Applications",             s:"custom-web-applications",             k:"webdev",    i:"ri-window-line",          col:"#00d2ff", d:"Secure, scalable web apps, portals and dashboards."},
+    {t:"Software Development (ERP, CRM, Business Tools)", s:"software-development-erp-crm", k:"webdev", i:"ri-apps-2-line", col:"#22d3ee", d:"Business software tailored to your workflows."},
+    {t:"Mobile App Development (Android / iOS / Cross‑platform)", s:"mobile-app-development", k:"webdev", i:"ri-smartphone-line", col:"#34d399", d:"High‑quality mobile apps with analytics and CI."},
+    {t:"UI/UX Design & Prototyping",          s:"ui-ux-design-prototyping",            k:"webdev",    i:"ri-pantone-line",         col:"#f472b6", d:"Research‑driven UX and beautiful UI in Figma."},
+
+    // Cybersecurity
+    {t:"Network Security & Penetration Testing", s:"network-security-penetration-testing", k:"cyber", i:"ri-shield-keyhole-line", col:"#60a5fa", d:"Comprehensive pentests with prioritized remediation."},
+    {t:"Web & App Security Audits",           s:"web-app-security-audits",             k:"cyber",    i:"ri-bug-line",             col:"#7c5cff", d:"OWASP‑aligned reviews for web/mobile apps."},
+    {t:"Malware & Threat Detection",          s:"malware-threat-detection",            k:"cyber",    i:"ri-virus-line",           col:"#ef4444", d:"IR triage, cleanup and continuous monitoring."},
+    {t:"Data Protection & Compliance",        s:"data-protection-compliance",          k:"cyber",    i:"ri-lock-2-line",          col:"#22c55e", d:"Policies, DPIA and controls aligned to regulations."},
+    {t:"Secure Hosting & Maintenance",        s:"secure-hosting-maintenance",          k:"cyber",    i:"ri-server-line",          col:"#38bdf8", d:"Hardened hosting, backups, monitoring and patching."}
+  ];
+
+  // Build category chips
+  const chipsWrap = document.getElementById('svcChips');
+  const chipAll = document.createElement('button');
+  chipAll.className = 'chip active';
+  chipAll.textContent = 'All';
+  chipAll.dataset.k = 'all';
+  chipsWrap.appendChild(chipAll);
+  CATS.forEach(cat=>{
+    const b = document.createElement('button');
+    b.className = 'chip';
+    b.textContent = cat.name;
+    b.dataset.k = cat.k;
+    chipsWrap.appendChild(b);
+  });
+
+  const grid = document.getElementById('svcGrid');
+  const countEl = document.getElementById('svcCount');
+  const searchEl = document.getElementById('svcSearch');
+
+  let activeCat = 'all';
+  let q = '';
+
+  function render(){
+    const items = SERVICES.filter(x=>{
+      const matchCat = activeCat === 'all' || x.k === activeCat;
+      const matchQ = !q || x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q);
+      return matchCat && matchQ;
+    });
+
+    countEl.textContent = `${items.length} service${items.length!==1?'s':''}`;
+
+    grid.innerHTML = items.map(x=>`
+      <a class="svc-card" href="service.html?slug=${x.s}" aria-label="${x.t}">
+        <div class="svc-ico" style="--c:${x.col}"><i class="${x.i}"></i></div>
+        <div class="svc-body">
+          <div class="svc-cat">${CATS.find(c=>c.k===x.k)?.name || ''}</div>
+          <div class="svc-title">${x.t}</div>
+          <div class="svc-desc">${x.d}</div>
+          <span class="svc-link">View details <i class="ri-arrow-right-up-line"></i></span>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  // Events
+  chipsWrap.addEventListener('click', (e)=>{
+    const b = e.target.closest('.chip'); if(!b) return;
+    chipsWrap.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+    b.classList.add('active');
+    activeCat = b.dataset.k;
+    render();
+  });
+
+  searchEl.addEventListener('input', ()=>{
+    q = searchEl.value.trim().toLowerCase();
+    render();
+  });
+
+  // Preselect via ?cat=security etc.
+  const params = new URLSearchParams(location.search);
+  const catParam = params.get('cat');
+  if(catParam && CATS.some(c=>c.k===catParam)){
+    activeCat = catParam;
+    chipsWrap.querySelectorAll('.chip').forEach(c=>{
+      c.classList.toggle('active', c.dataset.k===catParam);
+    });
+  }
+
+  render();
+</script>
+</body>
+</html>

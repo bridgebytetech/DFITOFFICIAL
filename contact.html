@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us, DF IT CENTRE</title>
+  <meta name="description" content="Get in touch with DF IT CENTRE. Send a message, email, WhatsApp or call, we’re here to help." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07080b; --text:#e8ecf6; --muted:#9aa3b2; --primary:#7c5cff; --accent:#00d2ff;
+      --card:#0c111b; --border:#151a24; --radius:14px; --grad:linear-gradient(120deg,#7c5cff,#00d2ff 60%,#23f0c7);
+      --shadow:0 10px 30px rgba(0,0,0,.35), 0 0 60px #7c5cff22, 0 0 80px #00d2ff16;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text); background:
+      radial-gradient(1200px 600px at 80% -10%, #1a1030 0%, transparent 60%),
+      radial-gradient(1000px 400px at -10% 10%, #0b1c2a 0%, transparent 50%), var(--bg);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; line-height:1.6; overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%); margin-inline:auto}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:60; background:linear-gradient(180deg,rgba(7,8,11,.9),rgba(7,8,11,.65)); backdrop-filter:blur(8px); border-bottom:1px solid var(--border)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.4px}
+    .brand span{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; font-family:"Space Grotesk"; font-size:18px}
+    .logo-img{width:34px;height:34px;display:block;border-radius:10px;object-fit:contain;background:#0a0f18;padding:2px;box-shadow:0 0 30px #7c5cff66,0 0 80px #00d2ff33}
+
+    .menu{display:flex; align-items:center; gap:22px}
+    .menu>li{list-style:none; position:relative}
+    .menu a,.menu button{background:none;border:0;color:#cfd5e3;font-weight:500;cursor:pointer;padding:8px 6px}
+    .menu a:hover,.menu button:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #253049;background:linear-gradient(180deg,#121827,#0d1220);color:#e9ecf4;box-shadow:var(--shadow);cursor:pointer}
+    .btn-primary{background: radial-gradient(60% 120% at 20% 20%, #7c5cff 0, #6e43ff 35%, #00a9ff 100%); border:0; color:#fff}
+    .mobile-toggle{display:none}
+
+    /* Mega menu */
+    .has-mega>.mega{
+      position:absolute; left:50%; transform:translateX(-50%); top:130%;
+      width:min(980px,92vw); display:none; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;
+      background:linear-gradient(180deg,#0b101a,#0a0f18); border:1px solid #1d2535; border-radius:16px; padding:18px; box-shadow:var(--shadow); z-index:70
+    }
+    .has-mega:hover>.mega{display:grid}
+    .mega .col{background:linear-gradient(180deg,#0e1422,#0c111b);border:1px solid #1b2333;border-radius:12px;padding:14px}
+    .mega h4{margin:6px 0 8px; font-family:"Space Grotesk"; font-size:15px; color:#eaf0ff}
+    .mega ul{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+    .mega a{color:#b9c2d3; font-size:14px}
+    @media (max-width:980px){
+      .menu{display:none; position:absolute; right:4%; top:62px; flex-direction:column; gap:12px; padding:14px; background:#0a0f18; border:1px solid #1d2535; border-radius:12px; width:min(92vw,520px)}
+      .mobile-toggle{display:inline-flex}
+      .has-mega>.mega{position:static; transform:none; width:100%; display:none; margin-top:8px}
+      .has-mega.open>.mega{display:grid}
+    }
+
+    /* Hero */
+    .hero{padding:72px 0 28px; border-bottom:1px solid var(--border)}
+    .crumb{color:#a8b2c6; font-size:14px}
+    .title{font-family:"Space Grotesk"; font-weight:700; font-size:clamp(34px,5vw,56px); margin:10px 0}
+    .lead{color:#c6cfdd; max-width:70ch}
+
+    /* Contact layout */
+    section{padding:68px 0}
+    .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
+    .card{background:linear-gradient(180deg,#0c111b,#0a0f18); border:1px solid var(--border); border-radius:14px; padding:22px}
+    .muted{color:#a8b2c6}
+    h3{font-family:"Space Grotesk"; margin:0 0 12px}
+
+    /* Form */
+    .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    label{font-size:14px; color:#cbd5e1}
+    input,select,textarea{
+      width:100%; padding:12px 14px; border-radius:10px; background:#0d1322; border:1px solid #253049; color:#e8ecf6; outline:none
+    }
+    textarea{min-height:140px; resize:vertical}
+    .full{grid-column:1/-1}
+    .hint{font-size:12px; color:#93a0b5}
+    .contact-cards{display:grid; grid-template-columns:1fr; gap:12px}
+    .contact-cards a{display:flex; align-items:center; gap:10px; padding:12px; border:1px solid #1b2333; border-radius:12px; background:linear-gradient(180deg,#0e1422,#0c111b)}
+
+    /* Map */
+    .map{border-radius:14px; overflow:hidden; border:1px solid #1b2333}
+
+    footer{padding:26px 0; color:#9aa3b2; border-top:1px solid var(--border); font-size:14px}
+
+    .reveal{opacity:.01; transform:translateY(16px); transition:transform .7s ease, opacity .7s ease}
+
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html#home">
+      <img src="logo.png" alt="DF IT CENTRE logo" class="logo-img" width="34" height="34" decoding="async">
+      <span>DF IT CENTRE</span>
+    </a>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+
+      <li class="has-mega" id="servicesItem">
+        <button type="button" aria-expanded="false">Services <i class="ri-arrow-down-s-line"></i></button>
+        <div class="mega" id="mega">
+          <div class="col">
+            <h4>Social Media Security</h4>
+            <ul>
+              <li><a href="service.html?slug=hacked-facebook-page-recovery">Hacked Facebook Page Recovery</a></li>
+              <li><a href="service.html?slug=hacked-facebook-account-recovery">Hacked Facebook Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-instagram-account-recovery">Hacked Instagram Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-youtube-channel-recovery">Hacked YouTube Channel Recovery</a></li>
+              <li><a href="service.html?slug=hacked-google-account-recovery">Hacked Google Account Recovery</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Social Media Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=fake-copyright-claim-restore">Fake Copyright Claim Restore</a></li>
+              <li><a href="service.html?slug=suspended-page-recovery">Suspended Page Recovery</a></li>
+              <li><a href="service.html?slug=business-manager-verification">Business Manager Verification</a></li>
+              <li><a href="service.html?slug=page-verification-badge">Page Verification (Blue/Gray Badge)</a></li>
+              <li><a href="service.html?slug=copyright-trademark-restore">Copyright + Trademark Restore</a></li>
+              <li><a href="service.html?slug=notable-permanent-blue-verification">Notable / Permanent Blue Verification</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Digital Marketing</h4>
+            <ul>
+              <li><a href="service.html?slug=instagram-marketing">Instagram Marketing</a></li>
+              <li><a href="service.html?slug=facebook-marketing">Facebook Marketing</a></li>
+              <li><a href="service.html?slug=youtube-marketing">YouTube Marketing</a></li>
+            </ul>
+
+            <h4 style="margin-top:12px">Web & Software Design & Development</h4>
+            <ul>
+              <li><a href="service.html?slug=responsive-website-design">Responsive Website Design</a></li>
+              <li><a href="service.html?slug=custom-web-applications">Custom Web Applications</a></li>
+              <li><a href="service.html?slug=software-development-erp-crm">Software Development (ERP, CRM, Business Tools)</a></li>
+              <li><a href="service.html?slug=mobile-app-development">Mobile App Development</a></li>
+              <li><a href="service.html?slug=ui-ux-design-prototyping">UI/UX Design & Prototyping</a></li>
+            </ul>
+
+            <h4 style="margin-top:12px">Cybersecurity Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=network-security-penetration-testing">Network Security & Penetration Testing</a></li>
+              <li><a href="service.html?slug=web-app-security-audits">Web & App Security Audits</a></li>
+              <li><a href="service.html?slug=malware-threat-detection">Malware & Threat Detection</a></li>
+              <li><a href="service.html?slug=data-protection-compliance">Data Protection & Compliance</a></li>
+              <li><a href="service.html?slug=secure-hosting-maintenance">Secure Hosting & Maintenance</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a class="btn btn-primary" href="index.html#get-started"><i class="ri-arrow-right-up-line"></i> Get Started</a></li>
+    </ul>
+
+    <button class="mobile-toggle btn" aria-label="Toggle menu" id="mobileToggle"><i class="ri-menu-3-line"></i></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container reveal">
+    <div class="crumb"><a href="index.html#home">Home</a> / <span>Contact Us</span></div>
+    <h1 class="title">Contact <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">DF IT CENTRE</span></h1>
+    <p class="lead">Have a project, recovery case or question? Send us a message, we usually reply within a few hours.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container grid">
+    <!-- Form -->
+    <div class="card reveal">
+      <h3>Send a message</h3>
+      <p class="muted">No backend? This form uses email on your device. Replace the email in the script with your real address.</p>
+      <form id="contactForm" onsubmit="sendEmail(event)" novalidate>
+        <div class="form-grid">
+          <div class="full">
+            <label>Full name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label>Phone (optional)</label>
+            <input type="tel" name="phone" placeholder="+880...">
+          </div>
+          <div class="full">
+            <label>Service</label>
+<select name="service" required>
+  <option value="">Choose a service…</option>
+
+  <optgroup label="Social Media Security">
+    <option>Hacked Facebook Page Recovery</option>
+    <option>Hacked Facebook Account Recovery</option>
+    <option>Hacked Instagram Account Recovery</option>
+    <option>Hacked YouTube Channel Recovery</option>
+    <option>Hacked Google Account Recovery</option>
+  </optgroup>
+
+  <optgroup label="Social Media Solutions">
+    <option>Fake Copyright Claim Restore</option>
+    <option>Suspended Page Recovery</option>
+    <option>Business Manager Verification</option>
+    <option>Page Verification (Blue/Gray Badge)</option>
+    <option>Copyright + Trademark Restore</option>
+    <option>Notable / Permanent Blue Verification</option>
+  </optgroup>
+
+  <optgroup label="Digital Marketing">
+    <option>Instagram Marketing</option>
+    <option>Facebook Marketing</option>
+    <option>YouTube Marketing</option>
+  </optgroup>
+
+  <optgroup label="Web & Software Design & Development">
+    <option>Responsive Website Design</option>
+    <option>Custom Web Applications</option>
+    <option>Software Development (ERP, CRM, Business Tools)</option>
+    <option>Mobile App Development (Android / iOS / Cross‑platform)</option>
+    <option>UI/UX Design & Prototyping</option>
+  </optgroup>
+
+  <optgroup label="Cybersecurity Solutions">
+    <option>Network Security & Penetration Testing</option>
+    <option>Web & App Security Audits</option>
+    <option>Malware & Threat Detection</option>
+    <option>Data Protection & Compliance</option>
+    <option>Secure Hosting & Maintenance</option>
+  </optgroup>
+</select>
+          </div>
+          <div class="full">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your case or project…" required></textarea>
+            <div class="hint">We’ll keep your details confidential.</div>
+          </div>
+          <div class="full" style="display:flex;gap:10px;align-items:center">
+            <input id="agree" type="checkbox" required style="width:auto">
+            <label for="agree" class="muted">I agree to the processing of my data for this inquiry.</label>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <button class="btn btn-primary" type="submit"><i class="ri-send-plane-2-line"></i> Send message</button>
+          <a class="btn" href="mailto:hello@dfitcentre.com" id="mailLink"><i class="ri-mail-line"></i> Open mail app</a>
+        </div>
+        <div id="formMsg" class="muted" style="margin-top:10px"></div>
+      </form>
+    </div>
+
+    <!-- Direct contacts -->
+    <div class="card reveal">
+      <h3>Quick contact</h3>
+      <div class="contact-cards">
+        <a href="mailto:support@dfitcentre.com"><i class="ri-mail-send-line"></i> support@dfitcentre.com</a>
+        <a href="tel:+8801700000000"><i class="ri-phone-line"></i> +880 1700 000 000</a>
+        <a href="https://wa.me/8801700000000" target="_blank" rel="noopener"><i class="ri-whatsapp-line"></i> WhatsApp us</a>
+        <a href="index.html"><i class="ri-compass-3-line"></i> Explore services</a>
+      </div>
+
+      <h3 style="margin-top:18px">Office</h3>
+      <p class="muted">Dhaka, Bangladesh (remote-friendly). Meetings by appointment.</p>
+
+      <div class="map" style="margin-top:12px">
+        <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=90.355%2C23.70%2C90.45%2C23.80&amp;layer=mapnik" width="100%" height="260" style="border:0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <div>Copyright © 2025 DF IT CENTRE. All rights reserved.</div>
+    <div><a href="#">Terms of Use</a> · <a href="#">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  (function(){
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+    const servicesItem = document.getElementById('servicesItem');
+    toggle?.addEventListener('click', ()=>{
+      const show = getComputedStyle(menu).display === 'none';
+      menu.style.display = show ? 'flex' : 'none';
+      toggle.innerHTML = show ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>';
+    });
+    servicesItem?.querySelector('button')?.addEventListener('click', (e)=>{
+      if (window.innerWidth > 980) return;
+      servicesItem.classList.toggle('open');
+      e.currentTarget.setAttribute('aria-expanded', servicesItem.classList.contains('open'));
+    });
+    window.addEventListener('resize', ()=>{ if (window.innerWidth > 980){ menu.style.display=''; servicesItem.classList.remove('open'); }});
+  })();
+
+  // Reveal
+  const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target)}}),{threshold:.2});
+  document.querySelectorAll('.reveal, section .container').forEach(el=>io.observe(el));
+
+  // Email fallback (edit the email below)
+  const CONTACT_EMAIL = 'hello@dfitcentre.com'; // TODO: replace with your email
+
+  function sendEmail(e){
+    e.preventDefault();
+    const f = e.target;
+    if(!f.reportValidity()) return;
+
+    const data = Object.fromEntries(new FormData(f).entries());
+    const subject = encodeURIComponent('New Inquiry' + (data.service || 'General'));
+    const body = encodeURIComponent(
+`Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone||'-'}
+
+Service: ${data.service}
+Message:
+${data.message}
+
+Consent: ${document.getElementById('agree').checked ? 'Yes' : 'No'}`);
+
+    const href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    document.getElementById('mailLink').href = href;
+    // Try to open the mail app immediately:
+    window.location.href = href;
+
+    const msg = document.getElementById('formMsg');
+    msg.textContent = 'Opening your email app… If it doesn’t open, click “Open mail app”.';
+  }
+</script>
+</body>
+</html>

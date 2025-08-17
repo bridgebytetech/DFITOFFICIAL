@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us, DF IT CENTRE</title>
+  <meta name="description" content="Know DF IT CENTRE, our mission, values, approach, team and why clients trust us to secure and grow their digital presence." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07080b; --text:#e8ecf6; --muted:#9aa3b2; --primary:#7c5cff; --accent:#00d2ff;
+      --card:#0c111b; --border:#151a24; --radius:14px;
+      --grad: linear-gradient(120deg,#7c5cff,#00d2ff 60%,#23f0c7);
+      --shadow:0 10px 30px rgba(0,0,0,.35), 0 0 60px #7c5cff22, 0 0 80px #00d2ff16;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text); background:
+      radial-gradient(1200px 600px at 80% -10%, #1a1030 0%, transparent 60%),
+      radial-gradient(1000px 400px at -10% 10%, #0b1c2a 0%, transparent 50%), var(--bg);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; line-height:1.6; overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{width:min(1200px,92%); margin-inline:auto}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:60; background:linear-gradient(180deg,rgba(7,8,11,.9),rgba(7,8,11,.65)); backdrop-filter:blur(8px); border-bottom:1px solid var(--border)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.4px}
+    .brand span{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; font-family:"Space Grotesk"; font-size:18px}
+    .logo-img{width:34px;height:34px;display:block;border-radius:10px;object-fit:contain;background:#0a0f18;padding:2px;box-shadow:0 0 30px #7c5cff66,0 0 80px #00d2ff33}
+
+    .menu{display:flex; align-items:center; gap:22px}
+    .menu>li{list-style:none; position:relative}
+    .menu a,.menu button{background:none;border:0;color:#cfd5e3;font-weight:500;cursor:pointer;padding:8px 6px}
+    .menu a:hover,.menu button:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #253049;background:linear-gradient(180deg,#121827,#0d1220);color:#e9ecf4;box-shadow:var(--shadow);cursor:pointer}
+    .btn-primary{background: radial-gradient(60% 120% at 20% 20%, #7c5cff 0, #6e43ff 35%, #00a9ff 100%); border:0; color:#fff}
+    .mobile-toggle{display:none}
+
+    /* Mega menu */
+    .has-mega>.mega{
+      position:absolute; left:50%; transform:translateX(-50%); top:130%;
+      width:min(980px,92vw); display:none; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;
+      background:linear-gradient(180deg,#0b101a,#0a0f18); border:1px solid #1d2535; border-radius:16px; padding:18px; box-shadow:var(--shadow); z-index:70
+    }
+    .has-mega:hover>.mega{display:grid}
+    .mega .col{background:linear-gradient(180deg,#0e1422,#0c111b);border:1px solid #1b2333;border-radius:12px;padding:14px}
+    .mega h4{margin:6px 0 8px; font-family:"Space Grotesk"; font-size:15px; color:#eaf0ff}
+    .mega ul{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+    .mega a{color:#b9c2d3; font-size:14px}
+    @media (max-width:980px){
+      .menu{display:none; position:absolute; right:4%; top:62px; flex-direction:column; gap:12px; padding:14px; background:#0a0f18; border:1px solid #1d2535; border-radius:12px; width:min(92vw,520px)}
+      .mobile-toggle{display:inline-flex}
+      .has-mega>.mega{position:static; transform:none; width:100%; display:none; margin-top:8px}
+      .has-mega.open>.mega{display:grid}
+    }
+
+    /* Hero */
+    .hero{padding:72px 0 28px; border-bottom:1px solid var(--border)}
+    .crumb{color:#a8b2c6; font-size:14px}
+    .title{font-family:"Space Grotesk"; font-weight:700; font-size:clamp(34px,5vw,56px); margin:10px 0}
+    .lead{color:#c6cfdd; max-width:68ch}
+
+    /* Sections */
+    section{padding:68px 0}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+    .card{background:linear-gradient(180deg,#0c111b,#0a0f18); border:1px solid var(--border); border-radius:14px; padding:22px}
+    .muted{color:#a8b2c6}
+    h3{font-family:"Space Grotesk"; margin:0 0 10px}
+    .stat{display:grid; gap:6px; padding:18px; border-radius:12px; background:linear-gradient(180deg,#0d1322,#0b101a); border:1px solid #1b2333}
+    .stat .num{font-family:"Space Grotesk"; font-size:28px}
+    .val{display:flex; align-items:center; gap:10px}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid #263049;background:#0d1322;border-radius:999px;padding:6px 10px;color:#cfd5e3}
+
+    /* Team */
+    .team{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .avatar{height:72px;width:72px;border-radius:50%;background:radial-gradient(circle at 40% 40%, #7c5cff, #00d2ff 70%, #23f0c7); box-shadow:0 10px 40px #00d2ff33}
+    .member{display:flex; gap:14px; align-items:center}
+    .member h4{margin:0}
+    .tag{font-size:13px; color:#9fb0c8}
+
+    /* CTA */
+    .cta{display:flex; gap:12px; flex-wrap:wrap}
+
+    /* Footer */
+    footer{padding:26px 0; color:#9aa3b2; border-top:1px solid var(--border); font-size:14px}
+
+    /* Reveal */
+    .reveal{opacity:.01; transform:translateY(16px); transition:transform .7s ease, opacity .7s ease}
+
+    @media (max-width:980px){
+      .grid-3,.team{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html#home">
+      <img src="logo.png" alt="DF IT CENTRE logo" class="logo-img" width="34" height="34" decoding="async">
+      <span>DF IT CENTRE</span>
+    </a>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+
+      <li class="has-mega" id="servicesItem">
+        <button type="button" aria-expanded="false">Services <i class="ri-arrow-down-s-line"></i></button>
+        <!-- Mega dropdown -->
+        <div class="mega" id="mega">
+          <div class="col">
+            <h4>Social Media Security</h4>
+            <ul>
+              <li><a href="service.html?slug=hacked-facebook-page-recovery">Hacked Facebook Page Recovery</a></li>
+              <li><a href="service.html?slug=hacked-facebook-account-recovery">Hacked Facebook Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-instagram-account-recovery">Hacked Instagram Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-youtube-channel-recovery">Hacked YouTube Channel Recovery</a></li>
+              <li><a href="service.html?slug=hacked-google-account-recovery">Hacked Google Account Recovery</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Social Media Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=fake-copyright-claim-restore">Fake Copyright Claim Restore</a></li>
+              <li><a href="service.html?slug=suspended-page-recovery">Suspended Page Recovery</a></li>
+              <li><a href="service.html?slug=business-manager-verification">Business Manager Verification</a></li>
+              <li><a href="service.html?slug=page-verification-badge">Page Verification (Blue/Gray Badge)</a></li>
+              <li><a href="service.html?slug=copyright-trademark-restore">Copyright + Trademark Restore</a></li>
+              <li><a href="service.html?slug=notable-permanent-blue-verification">Notable / Permanent Blue Verification</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Digital Marketing</h4>
+            <ul>
+              <li><a href="service.html?slug=instagram-marketing">Instagram Marketing</a></li>
+              <li><a href="service.html?slug=facebook-marketing">Facebook Marketing</a></li>
+              <li><a href="service.html?slug=youtube-marketing">YouTube Marketing</a></li>
+            </ul>
+
+            <h4 style="margin-top:12px">Web & Software Design & Development</h4>
+            <ul>
+              <li><a href="service.html?slug=responsive-website-design">Responsive Website Design</a></li>
+              <li><a href="service.html?slug=custom-web-applications">Custom Web Applications</a></li>
+              <li><a href="service.html?slug=software-development-erp-crm">Software Development (ERP, CRM, Business Tools)</a></li>
+              <li><a href="service.html?slug=mobile-app-development">Mobile App Development</a></li>
+              <li><a href="service.html?slug=ui-ux-design-prototyping">UI/UX Design & Prototyping</a></li>
+            </ul>
+
+            <h4 style="margin-top:12px">Cybersecurity Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=network-security-penetration-testing">Network Security & Penetration Testing</a></li>
+              <li><a href="service.html?slug=web-app-security-audits">Web & App Security Audits</a></li>
+              <li><a href="service.html?slug=malware-threat-detection">Malware & Threat Detection</a></li>
+              <li><a href="service.html?slug=data-protection-compliance">Data Protection & Compliance</a></li>
+              <li><a href="service.html?slug=secure-hosting-maintenance">Secure Hosting & Maintenance</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a class="btn btn-primary" href="index.html#get-started"><i class="ri-arrow-right-up-line"></i> Get Started</a></li>
+    </ul>
+
+    <button class="mobile-toggle btn" aria-label="Toggle menu" id="mobileToggle"><i class="ri-menu-3-line"></i></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container reveal">
+    <div class="crumb"><a href="index.html#home">Home</a> / <span>About Us</span></div>
+    <h1 class="title">About <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">DF IT CENTRE</span></h1>
+    <p class="lead">We’re a team of engineers, marketers and security specialists helping brands and creators build, secure and scale their digital presence, with reliability and results.</p>
+    <div class="cta" style="margin-top:14px">
+      <a class="btn btn-primary" href="contact.html"><i class="ri-chat-1-line"></i> Talk to us</a>
+      <a class="btn" href="index.html#services"><i class="ri-compass-3-line"></i> Explore services</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container grid-3">
+    <div class="stat reveal">
+      <div class="num">5000+ recoveries</div>
+      <div class="muted">Social accounts/pages and channels secured</div>
+    </div>
+    <div class="stat reveal">
+      <div class="num">98% satisfaction</div>
+      <div class="muted">Measured via client surveys and return engagements</div>
+    </div>
+    <div class="stat reveal">
+      <div class="num">24/7 response</div>
+      <div class="muted">Priority support for security incidents</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid-2">
+    <div class="card reveal">
+      <h3>Mission</h3>
+      <p class="muted">To make the internet safer and more effective for our clients, by combining security, engineering and growth marketing into one high‑trust team.</p>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="chip"><i class="ri-shield-check-line"></i> Security first</span>
+        <span class="chip"><i class="ri-rocket-2-line"></i> Outcomes</span>
+        <span class="chip"><i class="ri-user-smile-line"></i> Care</span>
+      </div>
+    </div>
+    <div class="card reveal">
+      <h3>What we do</h3>
+      <ul class="muted" style="margin:0;padding-left:18px">
+        <li>Account recovery and brand safety across Facebook, Instagram, YouTube, Google</li>
+        <li>Websites, custom apps and mobile apps with great UX</li>
+        <li>Digital marketing, organic + paid, with analytics</li>
+        <li>Cybersecurity audits, pentesting, and secure hosting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container card reveal">
+    <h3>Values</h3>
+    <div class="grid-3">
+      <div class="val"><i class="ri-shield-star-line"></i> Trust & transparency</div>
+      <div class="val"><i class="ri-lightbulb-flash-line"></i> Problem solving</div>
+      <div class="val"><i class="ri-time-line"></i> Reliability</div>
+      <div class="val"><i class="ri-lock-2-line"></i> Privacy by design</div>
+      <div class="val"><i class="ri-bar-chart-2-line"></i> Measurable impact</div>
+      <div class="val"><i class="ri-heart-2-line"></i> Client success</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container card reveal">
+    <h3>Leadership & Team</h3>
+    <div class="team">
+      <div class="member">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h4>Security Lead</h4>
+          <div class="tag">Incident Response & Compliance</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="avatar" aria-hidden="true" style="background:radial-gradient(circle at 40% 40%, #ff6bff,#7c5cff 70%,#00d2ff)"></div>
+        <div>
+          <h4>Engineering Lead</h4>
+          <div class="tag">Web, Apps, Infrastructure</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="avatar" aria-hidden="true" style="background:radial-gradient(circle at 40% 40%, #34d399,#22d3ee 70%,#7c5cff)"></div>
+        <div>
+          <h4>Growth Lead</h4>
+          <div class="tag">Marketing & Analytics</div>
+        </div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:12px">Want to join DF IT CENTRE? <a href="contact.html">Contact us</a> with your portfolio.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container card reveal">
+    <h3>Our Approach</h3>
+    <div class="grid-3">
+      <div class="card" style="background:transparent;border-color:#1b2333">
+        <h4><i class="ri-search-line"></i> Assess</h4>
+        <p class="muted">Rapid discovery to understand your goals, risks and constraints.</p>
+      </div>
+      <div class="card" style="background:transparent;border-color:#1b2333">
+        <h4><i class="ri-magic-line"></i> Execute</h4>
+        <p class="muted">Short iterations, clear updates and quality checks at each step.</p>
+      </div>
+      <div class="card" style="background:transparent;border-color:#1b2333">
+        <h4><i class="ri-shield-keyhole-line"></i> Secure & Scale</h4>
+        <p class="muted">Security hardening, analytics and continuous improvement.</p>
+      </div>
+    </div>
+    <div class="cta" style="margin-top:16px">
+      <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Start a conversation</a>
+      <a class="btn" href="index.html#services"><i class="ri-compass-discover-line"></i> View all services</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <div>Copyright © 2025 DF IT CENTRE. All rights reserved.</div>
+    <div><a href="#">Terms of Use</a> · <a href="#">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  (function(){
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+    const servicesItem = document.getElementById('servicesItem');
+    toggle?.addEventListener('click', ()=>{
+      const show = getComputedStyle(menu).display === 'none';
+      menu.style.display = show ? 'flex' : 'none';
+      toggle.innerHTML = show ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>';
+    });
+    servicesItem?.querySelector('button')?.addEventListener('click', (e)=>{
+      if (window.innerWidth > 980) return;
+      servicesItem.classList.toggle('open');
+      e.currentTarget.setAttribute('aria-expanded', servicesItem.classList.contains('open'));
+    });
+    window.addEventListener('resize', ()=>{ if (window.innerWidth > 980){ menu.style.display=''; servicesItem.classList.remove('open'); }});
+  })();
+
+  // Reveal
+  const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target)}}),{threshold:.2});
+  document.querySelectorAll('.reveal, section .container').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

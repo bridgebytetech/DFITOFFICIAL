@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta property="og:type" content="website">
+<meta property="og:title" content="DF IT CENTRE — Secure. Grow. Transform.">
+<meta property="og:description" content="We build, secure & grow your digital presence.">
+<meta property="og:url" content="https://dfitofficial.com/">
+<meta property="og:image" content="https://dfitofficial.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DF IT CENTRE — Secure. Grow. Transform.">
+<meta name="twitter:description" content="We build, secure & grow your digital presence.">
+<meta name="twitter:image" content="https://dfitofficial.com/og-image.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DF IT CENTRE, Secure. Grow. Transform.</title>
+  <meta name="description" content="DF IT CENTRE: Social media security, digital marketing, web/software, cybersecurity." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07080b;
+      --text:#e8ecf6;
+      --muted:#9aa3b2;
+      --primary:#7c5cff;     
+      --accent:#00d2ff;       
+      --card:#0c111b;
+      --border:#151a24;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.35), 0 0 60px #7c5cff22, 0 0 80px #00d2ff16;
+      --grad: linear-gradient(120deg, #7c5cff, #00d2ff 60%, #23f0c7);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:
+        radial-gradient(1200px 600px at 80% -10%, #1a1030 0%, transparent 60%),
+        radial-gradient(1000px 400px at -10% 10%, #0b1c2a 0%, transparent 50%),
+        var(--bg);
+      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.6;overflow-x:hidden
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{width:min(1200px,92%);margin-inline:auto}
+
+
+    header{
+      position:sticky;top:0;z-index:60;
+      background: linear-gradient(180deg, rgba(7,8,11,.9), rgba(7,8,11,.65));
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;padding:14px 0
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.4px}
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background: conic-gradient(from 120deg, #7c5cff, #00d2ff, #23f0c7, #7c5cff);
+      box-shadow: 0 0 30px #7c5cff66, 0 0 80px #00d2ff33
+    }
+    .brand span{
+      background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+      font-family:"Space Grotesk";font-size:18px
+    }
+
+
+    .menu{display:flex;align-items:center;gap:22px}
+    .menu > li{list-style:none;position:relative}
+    .menu > li > a, .menu > li > button{
+      background:none;border:0;color:#cfd5e3;font-weight:500;cursor:pointer;
+      padding:8px 6px;font-size:15px
+    }
+    .menu > li > a:hover, .menu > li > button:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #253049;
+      background:linear-gradient(180deg,#121827,#0d1220);color:#e9ecf4;box-shadow:var(--shadow);cursor:pointer
+    }
+    .btn:hover{border-color:#334155}
+    .btn-primary{
+      background: radial-gradient(60% 120% at 20% 20%, #7c5cff 0, #6e43ff 35%, #00a9ff 100%);
+      border:0;color:white;box-shadow: 0 10px 30px #7c5cff33, 0 0 40px #00d2ff44
+    }
+    .mobile-toggle{display:none}
+
+    .has-mega > .mega{
+      position:absolute;left:50%;transform:translateX(-50%);top:130%;
+      width:min(980px,92vw);background:linear-gradient(180deg,#0b101a,#0a0f18);
+      border:1px solid #1d2535;border-radius:16px;padding:18px;box-shadow:var(--shadow);
+      display:none;grid-template-columns: repeat(3, minmax(0,1fr));gap:16px;z-index:70
+    }
+    .has-mega:hover > .mega{display:grid}
+    .mega .col{background:linear-gradient(180deg,#0e1422,#0c111b);border:1px solid #1b2333;border-radius:12px;padding:14px}
+    .mega h4{margin:6px 0 8px;font-family:"Space Grotesk";font-size:15px;letter-spacing:.04em;color:#eaf0ff}
+    .mega ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .mega a{color:#b9c2d3;font-size:14px}
+    .mega a:hover{color:#fff;text-decoration:underline}
+
+    @media (max-width: 980px){
+      .menu{display:none;position:absolute;right:4%;top:62px;flex-direction:column;gap:12px;padding:14px;background:#0a0f18;border:1px solid #1d2535;border-radius:12px;width:min(92vw,520px)}
+      .mobile-toggle{display:inline-flex}
+      .has-mega > .mega{position:static;transform:none;width:100%;display:none;margin-top:8px}
+      .has-mega.open > .mega{display:grid}
+    }
+
+
+    .hero{padding:80px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    .eyebrow{font-family:"Space Grotesk";color:#b9c2d3;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
+    .title{
+      font-family:"Space Grotesk";font-weight:700;line-height:1.08;margin:10px 0 14px;
+      font-size:clamp(36px, 5vw, 64px);color:#fbfbff
+    }
+    .title strong{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:#c6cfdd;max-width:52ch}
+    .hero-cta{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
+    .tech{margin-top:40px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;color:#aab3c6}
+    .tech i{font-size:20px;color:#a8b2c7}
+    .orb{
+      position:relative;aspect-ratio:1/1;border-radius:50%;
+      width:min(520px, 85%);margin-left:auto;
+      background:
+        radial-gradient(60% 60% at 30% 30%, #7c5cff 0 40%, transparent 41%),
+        radial-gradient(60% 60% at 70% 70%, #00d2ff 0 40%, transparent 41%),
+        radial-gradient(100% 100% at 50% 50%, #14182a 20%, #090c13 60%, #06070a 100%);
+      box-shadow: inset 0 0 80px #7c5cff22, inset 0 0 120px #00d2ff22, 0 0 30px #7c5cff66, 0 0 80px #00d2ff33;
+      overflow:hidden;
+    }
+    .orb:before{content:"";position:absolute;inset:-30%;border-radius:50%;background: conic-gradient(from 0deg, #00d2ff33, #7c5cff55, #00d2ff00 60%);animation:spin 18s linear infinite}
+    .orb:after{content:"";position:absolute;inset:8%;border-radius:50%;border:1px solid #2c3650}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    section{padding:80px 0;border-top:1px solid var(--border)}
+    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+    .subtle{color:var(--muted)}
+    .card{background:linear-gradient(180deg, #0c111b, #0a0f18);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+
+    .cube-wrap{display:grid;place-items:center}
+    .cube{width:min(420px,80%);aspect-ratio:1/1;position:relative;transform:rotate(22deg);background:linear-gradient(135deg, #11162b, #0a0e19);border-radius:20px;border:1px dashed #2a3250}
+    .cube:before,.cube:after{content:"";position:absolute;inset:20%;border-radius:8px}
+    .cube:before{background: linear-gradient(135deg, #8a6aff, #00d2ff, #23f0c7);box-shadow: inset 0 0 40px #000,inset 0 0 80px #0002, 0 40px 80px #0007;transform:skewY(-18deg) rotate(-6deg)}
+    .cube:after{inset:8%;border:1px dashed #2f3755;transform:rotate(-10deg)}
+
+    .service-blob{width:min(460px,90%);aspect-ratio:1/1;border-radius:42% 58% 72% 28%/36% 40% 60% 64%;background: radial-gradient(60% 120% at 58% 42%, #7c5cff, #00d2ff 60%, #23f0c7 100%);filter:saturate(130%);box-shadow: 0 40px 120px #7c5cff33, 0 0 80px #00d2ff26}
+    .grid-2{display:grid;grid-template-columns: repeat(2,1fr);gap:18px}
+    .muted{color:#a8b2c6}
+
+    .platform{ }
+    .platform .wrap{display:grid;grid-template-columns: 260px 1fr;gap:30px;align-items:stretch}
+    .badge-wrap{display:grid;justify-items:center;gap:12px}
+    .p-badge{
+      display:none;place-items:center;height:200px;width:200px;border-radius:50%;color:white;
+      box-shadow:0 20px 70px #0006, inset 0 0 40px #ffffff22, var(--shadow)
+    }
+    .p-badge.active{display:grid}
+    .p-badge i{font-size:92px}
+    .p-badge.fb{background: radial-gradient(circle at 30% 30%, #3b82f6, #2563eb 40%, #1e40af 100%)}
+    .p-badge.ig{background: radial-gradient(circle at 30% 30%, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)}
+    .p-badge.yt{background: radial-gradient(circle at 40% 40%, #ff4d4d, #e11d1d 60%, #9f1111 100%)}
+
+    .platform-tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .platform-tabs .tab{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid #263049;
+      background:#0d1322;color:#cfd5e3;cursor:pointer
+    }
+    .platform-tabs .tab i{font-size:18px}
+    .platform-tabs .tab.active{background:linear-gradient(90deg,#7c5cff,#00d2ff);color:white;border-color:transparent}
+
+    .platform-card{background:linear-gradient(180deg, #0e1422, #0c111b);border:1px solid var(--border);border-radius:var(--radius);padding:22px;position:relative;overflow:hidden}
+    .platform-card .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .platform-card .title{font-family:"Space Grotesk";font-size:22px;font-weight:700}
+    .panel{display:none}
+    .panel.active{display:block}
+    .slides{position:relative;min-height:170px}
+    .slide{position:absolute;inset:0;opacity:0;transform:translateX(18px);transition:opacity .6s ease, transform .6s ease}
+    .slide.active{opacity:1;transform:translateX(0)}
+    .slide h4{margin:8px 0 6px;font-size:20px}
+    .slide p{color:#c2c9d8}
+    .actions{margin-top:14px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .dots{display:flex;gap:10px;align-items:center}
+    .dots button{width:8px;height:8px;border-radius:999px;border:0;background:#2a3143;cursor:pointer;transition:all .2s}
+    .dots button.active{width:18px;background:linear-gradient(90deg,#7c5cff,#00d2ff)}
+    .arrow{display:inline-flex;align-items:center;justify-content:center;height:32px;width:32px;border-radius:50%;background:#0f1524;border:1px solid #253049;color:#cdd3e1;cursor:pointer}
+
+  
+    .cta{display:grid;grid-template-columns: .9fr 1.1fr;gap:28px;align-items:center}
+    .cta .blob{width:min(420px, 92%);aspect-ratio:1/1;border-radius:40% 60% 50% 50%/60% 40% 60% 40%;background: radial-gradient(70% 120% at 40% 30%, #ff6bff, #7c5cff 40%, #00d2ff 100%);filter:saturate(125%);box-shadow:0 40px 120px #7c5cff33, 0 0 100px #00d2ff22}
+    .input{display:flex;gap:10px;flex-wrap:wrap}
+    .input input{background:#0d1322;border:1px solid #253049;color:#e8ecf6;outline:none;padding:12px 14px;border-radius:999px;min-width:260px}
+
+    footer{padding:26px 0;color:#9aa3b2;border-top:1px solid var(--border);font-size:14px}
+/* Bigger footer + centered layout */
+footer{ padding:64px 0; } /* was ~26px */
+.footer-wrap{
+  display:grid;
+  gap:22px;
+  justify-items:center;
+  text-align:center;
+}
+.footer-title{
+  margin:0;
+  font-family:"Space Grotesk";
+  font-weight:700;
+  font-size:clamp(24px, 3.2vw, 32px);
+  background:var(--grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:.2px;
+}
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* Larger pill buttons */
+.footer-social a.ic{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 16px;border-radius:999px;
+  background:#0d1322;border:1px solid #253049;color:#cfd5e3;
+  transition:all .2s ease;font-weight:600
+}
+.footer-social a.ic i{font-size:22px}
+.footer-social a.ic:hover{transform:translateY(-2px)}
+
+/* Brand hovers */
+.footer-social a.ic.fb:hover{
+  background:linear-gradient(90deg,#3b82f6,#2563eb);color:#fff;border-color:transparent
+}
+.footer-social a.ic.group:hover{
+  background:linear-gradient(90deg,#3b82f6,#1e40af);color:#fff;border-color:transparent
+}
+.footer-social a.ic.ig:hover{
+  background:linear-gradient(60deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);
+  color:#fff;border-color:transparent
+}
+.footer-social a.ic.in:hover{
+  background:linear-gradient(90deg,#0A66C2,#004182);color:#fff;border-color:transparent
+}
+
+/* Bottom row centered too */
+.footer-bottom{
+  display:flex;justify-content:center;align-items:center;
+  gap:16px;flex-wrap:wrap;color:#9aa3b2
+}
+
+/* Compact labels on very small screens */
+@media (max-width:520px){
+  .footer-social a.ic span{display:none}
+}
+
+
+    .reveal{opacity:.01;transform:translateY(16px);transition:transform .7s ease, opacity .7s ease}
+
+
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr;gap:28px}
+      .split{grid-template-columns:1fr}
+      .cta{grid-template-columns:1fr}
+      .platform .wrap{grid-template-columns:1fr}
+      .p-badge{height:160px;width:160px}
+    }
+
+@media (min-width: 1440px){
+  .container{ width:min(1320px, 92%) }
+}
+
+@media (max-width: 980px){
+  .hero{grid-template-columns:1fr;gap:28px}
+  .split{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+  .platform .wrap{grid-template-columns:1fr}
+  .p-badge{height:160px;width:160px}
+
+  .has-mega > .mega{position:static;transform:none;width:100%;display:none;margin-top:8px}
+  .has-mega.open > .mega{display:grid}
+}
+
+@media (max-width: 680px){
+  .title{font-size: clamp(28px, 8.5vw, 40px)}
+  .lead{font-size:15px}
+  .p-badge{width:128px;height:128px}
+  .platform-tabs .tab{padding:6px 10px;font-size:14px}
+  .slides{min-height:210px}
+}
+
+/* Featured services grid */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc-card{
+  background:linear-gradient(180deg,#0e1422,#0c111b);
+  border:1px solid var(--border);border-radius:14px;padding:18px;
+  display:flex;gap:14px;align-items:flex-start;transition:transform .18s ease,border-color .18s;
+}
+.svc-card:hover{transform:translateY(-2px);border-color:#263049}
+.svc-ico{
+  flex:0 0 44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  background: radial-gradient(circle at 40% 40%, var(--c,#7c5cff), #0ea5e9);
+  box-shadow:0 10px 30px #0005,inset 0 0 30px #ffffff22
+}
+.svc-ico i{font-size:22px}
+.svc-body{flex:1 1 auto}
+.svc-cat{font-size:12px;color:#9fb0c8;text-transform:uppercase;letter-spacing:.12em}
+.svc-title{margin:4px 0 6px;font-weight:700}
+.svc-link{display:inline-flex;align-items:center;gap:6px;color:#cfd5e3}
+.svc-link:hover{text-decoration:underline}
+
+@media (max-width: 1100px){ .grid-4{grid-template-columns:repeat(3,1fr)} }
+@media (max-width: 780px){ .grid-4{grid-template-columns:repeat(2,1fr)} }
+@media (max-width: 520px){ .grid-4{grid-template-columns:1fr} }
+
+/* Keep mega open while moving cursor from tab to panel */
+.has-mega{ position:relative }
+
+/* bring panel just under the tab (no gap) */
+.has-mega > .mega{
+  top: calc(100% + 12px);   /* was 130% */
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  z-index: 70;
+}
+
+/* invisible hover-bridge to remove any micro-gap */
+.has-mega::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:100%;
+  height:14px;            /* matches calc() above */
+}
+
+/* show rules */
+.has-mega:hover > .mega,
+.has-mega:focus-within > .mega,
+.has-mega.open > .mega{   /* JS adds .open */
+  display: grid;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+<img src="logo.png" alt="DF IT CENTRE logo" class="logo-img" width="60" height="60" decoding="async" fetchpriority="high">
+<span>DF IT CENTRE</span>
+</a>
+
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+
+        <li class="has-mega" id="servicesItem">
+          <button type="button" aria-expanded="false">Services <i class="ri-arrow-down-s-line"></i></button>
+
+<div class="mega" id="mega">
+  <div class="col">
+    <h4>Social Media Security</h4>
+    <ul>
+      <li><a href="service.html?slug=hacked-facebook-page-recovery">Hacked Facebook Page Recovery</a></li>
+      <li><a href="service.html?slug=hacked-facebook-account-recovery">Hacked Facebook Account Recovery</a></li>
+      <li><a href="service.html?slug=hacked-instagram-account-recovery">Hacked Instagram Account Recovery</a></li>
+      <li><a href="service.html?slug=hacked-youtube-channel-recovery">Hacked YouTube Channel Recovery</a></li>
+      <li><a href="service.html?slug=hacked-google-account-recovery">Hacked Google Account Recovery</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>Social Media Solutions</h4>
+    <ul>
+      <li><a href="service.html?slug=fake-copyright-claim-restore">Fake Copyright Claim Restore</a></li>
+      <li><a href="service.html?slug=suspended-page-recovery">Suspended Page Recovery</a></li>
+      <li><a href="service.html?slug=business-manager-verification">Business Manager Verification</a></li>
+      <li><a href="service.html?slug=page-verification-badge">Page Verification (Blue/Gray Badge)</a></li>
+      <li><a href="service.html?slug=copyright-trademark-restore">Copyright + Trademark Restore</a></li>
+      <li><a href="service.html?slug=notable-permanent-blue-verification">Notable / Permanent Blue Verification</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>Digital Marketing</h4>
+    <ul>
+      <li><a href="service.html?slug=instagram-marketing">Instagram Marketing</a></li>
+      <li><a href="service.html?slug=facebook-marketing">Facebook Marketing</a></li>
+      <li><a href="service.html?slug=youtube-marketing">YouTube Marketing</a></li>
+    </ul>
+
+    <h4 style="margin-top:12px">Web & Software Design & Development</h4>
+    <ul>
+      <li><a href="service.html?slug=responsive-website-design">Responsive Website Design</a></li>
+      <li><a href="service.html?slug=custom-web-applications">Custom Web Applications</a></li>
+      <li><a href="service.html?slug=software-development-erp-crm">Software Development (ERP, CRM, Business Tools)</a></li>
+      <li><a href="service.html?slug=mobile-app-development">Mobile App Development (Android / iOS / Cross‑platform)</a></li>
+      <li><a href="service.html?slug=ui-ux-design-prototyping">UI/UX Design & Prototyping</a></li>
+    </ul>
+
+    <h4 style="margin-top:12px">Cybersecurity Solutions</h4>
+    <ul>
+      <li><a href="service.html?slug=network-security-penetration-testing">Network Security & Penetration Testing</a></li>
+      <li><a href="service.html?slug=web-app-security-audits">Web & App Security Audits</a></li>
+      <li><a href="service.html?slug=malware-threat-detection">Malware & Threat Detection</a></li>
+      <li><a href="service.html?slug=data-protection-compliance">Data Protection & Compliance</a></li>
+      <li><a href="service.html?slug=secure-hosting-maintenance">Secure Hosting & Maintenance</a></li>
+    </ul>
+  </div>
+</div>
+        </li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="btn btn-primary" href="#get-started"><i class="ri-arrow-right-up-line"></i> Get Started</a></li>
+      </ul>
+
+      <button class="mobile-toggle btn" aria-label="Toggle menu" id="mobileToggle">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="home" class="container hero">
+    <div class="reveal">
+      <div class="eyebrow">Digital Solutions</div>
+      <h1 class="title"><strong>Secure. Grow. Transform.</strong></h1>
+      <p class="lead">We build, secure & grow your digital presence, websites, apps, marketing and cybersecurity. Built for performance and trust.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#get-started"><i class="ri-rocket-2-fill"></i> Get started</a>
+        <a class="btn" href="services_page.html"><i class="ri-eye-line"></i> Explore services</a>
+      </div>
+      <div class="tech">
+        <span>Trusted stack:</span>
+        <i class="ri-javascript-fill" title="JavaScript"></i>
+        <i class="ri-reactjs-line" title="React"></i>
+        <i class="ri-nodejs-line" title="Node"></i>
+        <i class="ri-database-2-line" title="SQL/NoSQL"></i>
+        <i class="ri-shield-keyhole-line" title="Security"></i>
+        <i class="ri-aws-line" title="Cloud"></i>
+      </div>
+    </div>
+    <div class="orb reveal" aria-hidden="true"></div>
+  </main>
+
+
+  <section id="about">
+    <div class="container split">
+      <div class="reveal">
+        <div class="eyebrow">DF IT CENTRE</div>
+        <h2 class="title" style="font-size:34px;line-height:1.18;margin:8px 0 10px;">
+          <strong>We build, secure & grow</strong> your digital footprint
+        </h2>
+        <p class="subtle">
+          From social media management to web/software development and cybersecurity, we deliver reliable solutions that help creators, businesses and teams scale online with confidence.
+        </p>
+        <div class="hero-cta" style="margin-top:18px">
+          <a class="btn" href="services_page.html"><i class="ri-arrow-right-line"></i> Learn more</a>
+        </div>
+      </div>
+      <div class="cube-wrap reveal"><div class="cube" aria-hidden="true"></div></div>
+    </div>
+  </section>
+
+
+  <section id="services">
+    <div class="container split">
+      <div class="service-blob reveal" aria-hidden="true"></div>
+      <div class="reveal">
+        <div class="eyebrow"></div>
+        <h3 class="title" style="font-size:32px;margin:10px 0 8px"><strong>Protect, Promote, Perform</strong></h3>
+        <p class="subtle">End‑to‑end digital services from account security to UX/UI, custom apps and growth marketing designed to drive measurable results.</p>
+        <div class="grid-2" style="margin-top:18px">
+          <div class="card">
+            <h4><i class="ri-shield-check-line"></i> Security & Recovery</h4>
+            <p class="muted">Account hardening, incident response, secure infra, audits.</p>
+          </div>
+          <div class="card">
+            <h4><i class="ri-global-line"></i> Web & Custom Apps</h4>
+            <p class="muted">High‑performance websites, custom dashboards, integrations.</p>
+          </div>
+          <div class="card">
+            <h4><i class="ri-megaphone-line"></i> Growth Marketing</h4>
+            <p class="muted">SEO/SMO, paid ads, funnels, analytics & conversion boost.</p>
+          </div>
+          <div class="card">
+            <h4><i class="ri-lock-star-line"></i> Brand Safety</h4>
+            <p class="muted">Copyright/impersonation takedowns, verification guidance.</p>
+          </div>
+        </div>
+        <div class="hero-cta" style="margin-top:20px">
+          <a class="btn btn-primary" href="#get-started"><i class="ri-flashlight-fill"></i> Start a project</a>
+          <a class="btn" href="contact.html"><i class="ri-chat-1-line"></i> Talk to us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section id="featured">
+  <div class="container reveal">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+      <h3 class="title" style="font-size:28px;margin:0"><strong>Featured this visit</strong></h3>
+      <div style="display:flex;gap:10px">
+        <a class="btn" href="services_page.html"><i class="ri-compass-3-line"></i> View all</a>
+        <button class="btn btn-primary" id="shuffleServices"><i class="ri-shuffle-line"></i> Shuffle</button>
+      </div>
+    </div>
+    <div id="featuredGrid" class="grid-4" aria-live="polite"></div>
+  </div>
+</section>
+
+
+  <section id="platforms" class="platform">
+    <div class="container">
+      <div class="wrap card">
+ 
+        <div class="badge-wrap">
+          <div class="p-badge fb active" data-key="fb" aria-hidden="true"><i class="ri-facebook-circle-fill"></i></div>
+          <div class="p-badge ig" data-key="ig" aria-hidden="true"><i class="ri-instagram-line"></i></div>
+          <div class="p-badge yt" data-key="yt" aria-hidden="true"><i class="ri-youtube-fill"></i></div>
+
+          <div class="platform-tabs" role="tablist">
+            <button class="tab active" data-key="fb" role="tab" aria-selected="true"><i class="ri-facebook-fill"></i> Facebook</button>
+            <button class="tab" data-key="ig" role="tab" aria-selected="false"><i class="ri-instagram-line"></i> Instagram</button>
+            <button class="tab" data-key="yt" role="tab" aria-selected="false"><i class="ri-youtube-fill"></i> YouTube</button>
+          </div>
+        </div>
+
+  
+        <div class="platform-card">
+
+          <div class="head"><div class="title" id="title-fb">Facebook Services</div>
+            <div>
+              <button class="arrow" data-prev="fb"><i class="ri-arrow-left-s-line"></i></button>
+              <button class="arrow" data-next="fb"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+          <div class="panel active" id="panel-fb">
+            <div class="slides">
+              <article class="slide active">
+                <h4>Recover hacked accounts & pages</h4>
+                <p>Rapid response for compromised Facebook accounts/pages. Identity proofing, security review, and full restoration workflow.</p>
+               
+              </article>
+              <article class="slide">
+                <h4>Restore disabled or restricted pages</h4>
+                <p>Policy appeal support, documentation and brand authentication to lift unjust restrictions and restore reach.</p>
+            
+              </article>
+              <article class="slide">
+                <h4>Business Manager & Page verification</h4>
+                <p>Guided verification, org docs, security setup and best practices to keep assets compliant and trusted.</p>
+            
+              </article>
+              <article class="slide">
+                <h4>Copyright & impersonation resolutions</h4>
+                <p>Takedown requests, ownership claims, brand protection and content reinstatement with data safety.</p>
+            
+              </article>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="contact.html"><i class="ri-customer-service-2-line"></i> Get help</a>
+              <div class="dots" data-dots="fb"></div>
+            </div>
+          </div>
+
+
+          <div class="head" style="display:none" id="head-ig"><div class="title">Instagram Services</div>
+            <div>
+              <button class="arrow" data-prev="ig"><i class="ri-arrow-left-s-line"></i></button>
+              <button class="arrow" data-next="ig"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+          <div class="panel" id="panel-ig">
+            <div class="slides">
+              <article class="slide active">
+                <h4>Hacked Instagram Account Recovery</h4>
+                <p>Securely restore access, reset credentials, enable 2FA and harden security to prevent future breaches.</p>
+                
+              </article>
+              <article class="slide">
+                <h4>Disabled account & policy appeals</h4>
+                <p>We prepare appeal documents, identity proofs and case summaries to reinstate legitimate accounts.</p>
+                
+              </article>
+              <article class="slide">
+                <h4>Growth & content optimization</h4>
+                <p>Hashtag strategy, reels optimization, insights tracking and conversion‑focused profile revamp.</p>
+                
+              </article>
+              <article class="slide">
+                <h4>Verification guidance</h4>
+                <p>Eligibility checks, documentation and brand presence strategy for Blue badge readiness.</p>
+              
+              </article>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="contact.html"><i class="ri-customer-service-2-line"></i> Get help</a>
+              <div class="dots" data-dots="ig"></div>
+            </div>
+          </div>
+
+
+          <div class="head" style="display:none" id="head-yt"><div class="title">YouTube Services</div>
+            <div>
+              <button class="arrow" data-prev="yt"><i class="ri-arrow-left-s-line"></i></button>
+              <button class="arrow" data-next="yt"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+          <div class="panel" id="panel-yt">
+            <div class="slides">
+              <article class="slide active">
+                <h4>Hacked YouTube Channel Recovery</h4>
+                <p>Channel compromise triage, Google account security, ownership restore and brand safety checks.</p>
+                
+              </article>
+              <article class="slide">
+                <h4>Copyright claims & Content ID</h4>
+                <p>Counter‑notifications, rights management and fair‑use guidance with risk‑aware documentation.</p>
+                
+              </article>
+              <article class="slide">
+                <h4>Monetization & policy appeals</h4>
+                <p>Policy compliance review, re‑application support and optimization for Ad‑friendly content.</p>
+                
+              </article>
+              <article class="slide">
+                <h4>Brand account & 2FA security</h4>
+                <p>Advanced 2‑step verification, role‑based access and backup/recovery best practices.</p>
+                
+              </article>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="contact.html"><i class="ri-customer-service-2-line"></i> Get help</a>
+              <div class="dots" data-dots="yt"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+
+  <section id="get-started">
+    <div class="container cta card">
+      <div class="blob" aria-hidden="true"></div>
+      <div>
+        <h3 class="title" style="font-size:30px;margin:0 0 6px"><strong>Get exponential reach</strong> via DF IT CENTRE</h3>
+        <p class="subtle">Drop your work email, we’ll come back with a quick plan and timelines.</p>
+        <div class="input" style="margin-top:14px">
+          <input type="email" placeholder="Enter your work email" />
+          <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<footer id="contact">
+  <div class="container footer-wrap">
+    <!-- Professional headline -->
+    <h3 class="footer-title">Follow DF IT CENTRE</h3>
+
+    <!-- Centered social buttons -->
+    <nav class="footer-social" aria-label="Social links">
+      <a class="ic fb" href="https://facebook.com/DFiT.Official" target="_blank" rel="noopener" title="Facebook Page">
+        <i class="ri-facebook-fill"></i><span>Facebook Page</span>
+      </a>
+      <a class="ic group" href="https://facebook.com/groups/YourGroup" target="_blank" rel="noopener" title="Facebook Group">
+        <i class="ri-group-line"></i><span>FB Group</span>
+      </a>
+      <a class="ic ig" href="https://instagram.com/YourHandle" target="_blank" rel="noopener" title="Instagram">
+        <i class="ri-instagram-line"></i><span>Instagram</span>
+      </a>
+      <a class="ic in" href="https://www.linkedin.com/company/YourCompany" target="_blank" rel="noopener" title="LinkedIn">
+        <i class="ri-linkedin-fill"></i><span>LinkedIn</span>
+      </a>
+    </nav>
+
+    <!-- Bottom legal row -->
+    <div class="footer-bottom">
+      <div>Copyright © 2025 DF IT CENTRE. All rights reserved.</div>
+      <div><a href="#">Terms of Use</a> · <a href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const SLIDE_INTERVAL = 8500;   
+    const RESUME_DELAY   = 1500;   
+
+    (function(){
+      const toggle = document.getElementById('mobileToggle');
+      const menu = document.getElementById('menu');
+      const servicesItem = document.getElementById('servicesItem');
+      toggle?.addEventListener('click', () => {
+        const show = getComputedStyle(menu).display === 'none';
+        menu.style.display = show ? 'flex' : 'none';
+        toggle.innerHTML = show ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>';
+      });
+
+      servicesItem?.querySelector('button')?.addEventListener('click', (e)=>{
+        if (window.innerWidth > 980) return; 
+        servicesItem.classList.toggle('open');
+        const expanded = servicesItem.classList.contains('open');
+        e.currentTarget.setAttribute('aria-expanded', expanded);
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) { menu.style.display=''; servicesItem.classList.remove('open'); }
+      });
+    })();
+
+    // Desktop hover delay for Services mega
+(function(){
+  const item = document.getElementById('servicesItem');
+  if(!item) return;
+
+  // Only on hover-capable devices
+  if (window.matchMedia('(hover: hover)').matches) {
+    let hideTimer;
+
+    item.addEventListener('mouseenter', ()=>{
+      clearTimeout(hideTimer);
+      item.classList.add('open');
+      const btn = item.querySelector('button, a');
+      btn && btn.setAttribute('aria-expanded','true');
+    });
+
+    item.addEventListener('mouseleave', ()=>{
+      hideTimer = setTimeout(()=>{
+        item.classList.remove('open');
+        const btn = item.querySelector('button, a');
+        btn && btn.setAttribute('aria-expanded','false');
+      }, 180); // 180ms grace period
+    });
+
+    // Click outside to close
+    document.addEventListener('click', (e)=>{
+      if(!item.contains(e.target)){
+        item.classList.remove('open');
+        const btn = item.querySelector('button, a');
+        btn && btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+})();
+
+
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0px)'; io.unobserve(e.target); }
+      });
+    }, {threshold:.2});
+    document.querySelectorAll('.reveal, section .container').forEach(el=>io.observe(el));
+
+
+function createSlider(key){
+  const panel    = document.getElementById('panel-' + key);
+  const slides   = Array.from(panel.querySelectorAll('.slide'));
+  const dotsWrap = document.querySelector('[data-dots="'+key+'"]');
+  const prevBtn  = document.querySelector('[data-prev="'+key+'"]');
+  const nextBtn  = document.querySelector('[data-next="'+key+'"]');
+
+  let idx = 0, timer, resumeTimer;
+
+  function makeDots(){
+    dotsWrap.innerHTML = '';
+    slides.forEach((_,i)=>{
+      const b = document.createElement('button');
+      if(i===0) b.classList.add('active');
+      b.addEventListener('click', ()=>go(i,true));
+      dotsWrap.appendChild(b);
+    });
+  }
+  function setActive(i){
+    slides.forEach((s,si)=>s.classList.toggle('active', si===i));
+    dotsWrap.querySelectorAll('button').forEach((d,di)=>d.classList.toggle('active', di===i));
+  }
+  function go(i, manual=false){
+    idx = (i + slides.length) % slides.length;
+    setActive(idx);
+    if(manual) restart();
+  }
+
+  function start(){ stop(); timer = setInterval(()=> go(idx+1), SLIDE_INTERVAL); }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  function restart(){ stop(); start(); }
+  function delayedStart(){ clearTimeout(resumeTimer); resumeTimer = setTimeout(start, RESUME_DELAY); }
+
+  makeDots(); start();
+
+  prevBtn?.addEventListener('click', ()=>go(idx-1,true));
+  nextBtn?.addEventListener('click', ()=>go(idx+1,true));
+
+
+  panel.addEventListener('mouseenter', stop);
+  panel.addEventListener('mouseleave', delayedStart);
+  panel.addEventListener('pointerdown', stop);
+  panel.addEventListener('pointerup', delayedStart);
+  panel.addEventListener('focusin', stop);
+  panel.addEventListener('focusout', delayedStart);
+
+
+  let x0=null;
+  panel.addEventListener('touchstart', e=>{ x0=e.touches[0].clientX; stop(); }, {passive:true});
+  panel.addEventListener('touchend', e=>{
+    if(x0===null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if(Math.abs(dx)>40){ dx>0 ? go(idx-1,true) : go(idx+1,true); }
+    x0=null; delayedStart();
+  });
+
+
+  document.addEventListener('visibilitychange', ()=> document.hidden ? stop() : start());
+
+  return { start, stop, go };
+}
+
+
+    const sliders = {
+      fb: createSlider('fb'),
+      ig: createSlider('ig'),
+      yt: createSlider('yt')
+    };
+
+    sliders.ig.stop(); sliders.yt.stop();
+    document.getElementById('panel-ig').style.display='none';
+    document.getElementById('panel-yt').style.display='none';
+
+
+    (function(){
+      const tabs = document.querySelectorAll('.platform-tabs .tab');
+      const badges = document.querySelectorAll('.p-badge');
+      function show(key){
+
+        ['fb','ig','yt'].forEach(k=>{
+          const panel = document.getElementById('panel-'+k);
+          const head = document.getElementById('head-'+k);
+          if(k===key){
+            panel.style.display='block'; panel.classList.add('active');
+            head && (head.style.display='flex');
+            sliders[k].start();
+          }else{
+            panel.style.display='none'; panel.classList.remove('active');
+            head && (head.style.display='none');
+            sliders[k].stop();
+          }
+        });
+
+        tabs.forEach(t=>{
+          t.classList.toggle('active', t.dataset.key===key);
+          t.setAttribute('aria-selected', t.dataset.key===key ? 'true' : 'false');
+        });
+
+        badges.forEach(b=>b.classList.toggle('active', b.dataset.key===key));
+
+        const firstHead = document.querySelector('.platform-card > .head');
+        if(key==='fb'){
+          firstHead.style.display='flex';
+        }else{
+          firstHead.style.display='none';
+        }
+      }
+      tabs.forEach(t => t.addEventListener('click', ()=> show(t.dataset.key)));
+
+      if (location.search.includes('ig')) show('ig');
+      if (location.search.includes('yt')) show('yt');
+    })();
+
+    // How many to show
+const FEATURED_COUNT = 8;
+
+// All services (title, slug, category, icon, color)
+const ALL_SERVICES = [
+  // Social Media Security
+  {t:"Hacked Facebook Page Recovery",       s:"hacked-facebook-page-recovery",       c:"Social Media Security",     i:"ri-facebook-circle-fill",  col:"#2563eb"},
+  {t:"Hacked Facebook Account Recovery",    s:"hacked-facebook-account-recovery",    c:"Social Media Security",     i:"ri-facebook-circle-fill",  col:"#2563eb"},
+  {t:"Hacked Instagram Account Recovery",   s:"hacked-instagram-account-recovery",   c:"Social Media Security",     i:"ri-instagram-line",        col:"#e1306c"},
+  {t:"Hacked YouTube Channel Recovery",     s:"hacked-youtube-channel-recovery",     c:"Social Media Security",     i:"ri-youtube-fill",          col:"#e11d1d"},
+  {t:"Hacked Google Account Recovery",      s:"hacked-google-account-recovery",      c:"Social Media Security",     i:"ri-google-fill",           col:"#34a853"},
+
+  // Social Media Solutions
+  {t:"Fake Copyright Claim Restore",        s:"fake-copyright-claim-restore",        c:"Social Media Solutions",    i:"ri-copyright-line",        col:"#7c5cff"},
+  {t:"Suspended Page Recovery",             s:"suspended-page-recovery",             c:"Social Media Solutions",    i:"ri-shield-keyhole-line",   col:"#00d2ff"},
+  {t:"Business Manager Verification",       s:"business-manager-verification",       c:"Social Media Solutions",    i:"ri-building-4-line",       col:"#00bcd4"},
+  {t:"Page Verification (Blue/Gray Badge)", s:"page-verification-badge",             c:"Social Media Solutions",    i:"ri-verified-badge-line",   col:"#2dd4bf"},
+  {t:"Copyright + Trademark Restore",       s:"copyright-trademark-restore",         c:"Social Media Solutions",    i:"ri-file-shield-2-line",    col:"#6ee7b7"},
+  {t:"Notable / Permanent Blue Verification",s:"notable-permanent-blue-verification",c:"Social Media Solutions",    i:"ri-medal-2-line",          col:"#60a5fa"},
+
+  // Digital Marketing
+  {t:"Instagram Marketing",                 s:"instagram-marketing",                 c:"Digital Marketing",         i:"ri-instagram-line",        col:"#e1306c"},
+  {t:"Facebook Marketing",                  s:"facebook-marketing",                  c:"Digital Marketing",         i:"ri-facebook-circle-fill",  col:"#2563eb"},
+  {t:"YouTube Marketing",                   s:"youtube-marketing",                   c:"Digital Marketing",         i:"ri-youtube-fill",          col:"#e11d1d"},
+
+  // Web & Software
+  {t:"Responsive Website Design",           s:"responsive-website-design",           c:"Web & Software Development",i:"ri-global-line",           col:"#7c5cff"},
+  {t:"Custom Web Applications",             s:"custom-web-applications",             c:"Web & Software Development",i:"ri-window-line",          col:"#00d2ff"},
+  {t:"Software Development (ERP, CRM, Business Tools)", s:"software-development-erp-crm", c:"Web & Software Development", i:"ri-apps-2-line", col:"#22d3ee"},
+  {t:"Mobile App Development (Android / iOS / Cross‑platform)", s:"mobile-app-development", c:"Web & Software Development", i:"ri-smartphone-line", col:"#34d399"},
+  {t:"UI/UX Design & Prototyping",          s:"ui-ux-design-prototyping",            c:"Web & Software Development",i:"ri-pantone-line",         col:"#f472b6"},
+
+  // Cybersecurity
+  {t:"Network Security & Penetration Testing", s:"network-security-penetration-testing", c:"Cybersecurity Solutions", i:"ri-shield-keyhole-line", col:"#60a5fa"},
+  {t:"Web & App Security Audits",           s:"web-app-security-audits",             c:"Cybersecurity Solutions",   i:"ri-bug-line",             col:"#7c5cff"},
+  {t:"Malware & Threat Detection",          s:"malware-threat-detection",            c:"Cybersecurity Solutions",   i:"ri-virus-line",           col:"#ef4444"},
+  {t:"Data Protection & Compliance",        s:"data-protection-compliance",          c:"Cybersecurity Solutions",   i:"ri-lock-2-line",          col:"#22c55e"},
+  {t:"Secure Hosting & Maintenance",        s:"secure-hosting-maintenance",          c:"Cybersecurity Solutions",   i:"ri-server-line",          col:"#38bdf8"}
+];
+
+// Random pick + render
+function renderFeaturedServices(){
+  const grid = document.getElementById('featuredGrid');
+  if(!grid) return;
+
+  const selected = [...ALL_SERVICES]
+    .sort(()=> Math.random() - 0.5)
+    .slice(0, FEATURED_COUNT);
+
+  grid.innerHTML = selected.map(x => `
+    <a class="svc-card" href="service.html?slug=${x.s}" aria-label="${x.t}">
+      <div class="svc-ico" style="--c:${x.col}"><i class="${x.i}"></i></div>
+      <div class="svc-body">
+        <div class="svc-cat">${x.c}</div>
+        <div class="svc-title">${x.t}</div>
+        <span class="svc-link">Learn more <i class="ri-arrow-right-up-line"></i></span>
+      </div>
+    </a>
+  `).join('');
+}
+
+// Initial render
+renderFeaturedServices();
+
+// Shuffle button (without reloading)
+document.getElementById('shuffleServices')?.addEventListener('click', renderFeaturedServices);
+  </script>
+</body>
+</html>

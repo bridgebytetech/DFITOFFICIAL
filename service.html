@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Services of DF IT CENTRE</title>
+  <meta name="description" content="DF IT CENTRE service page."/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="canonical" href="" id="canonical">
+  <style>
+    :root{
+      --bg:#07080b;--text:#e8ecf6;--muted:#9aa3b2;--primary:#7c5cff;--accent:#00d2ff;
+      --card:#0c111b;--border:#151a24;--radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:
+      radial-gradient(1200px 600px at 80% -10%, #1a1030 0%, transparent 60%),
+      radial-gradient(1000px 400px at -10% 10%, #0b1c2a 0%, transparent 50%),var(--bg);
+      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(7,8,11,.9),rgba(7,8,11,.65));backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700}
+    .logo{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 120deg,#7c5cff,#00d2ff,#23f0c7,#7c5cff)}
+    .brand span{font-family:"Space Grotesk";background:linear-gradient(120deg,#7c5cff,#00d2ff 60%,#23f0c7);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .menu{display:flex;gap:22px;align-items:center}
+    .menu>li{list-style:none;position:relative}
+    .menu a,.menu button{background:none;border:0;color:#cfd5e3;font-weight:500;cursor:pointer;padding:8px 6px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #253049;background:linear-gradient(180deg,#121827,#0d1220);color:#e9ecf4}
+    .btn-primary{background: radial-gradient(60% 120% at 20% 20%, #7c5cff 0, #6e43ff 35%, #00a9ff 100%);border:0;color:white}
+    .has-mega>.mega{position:absolute;left:50%;transform:translateX(-50%);top:130%;width:min(980px,92vw);display:none;
+      background:linear-gradient(180deg,#0b101a,#0a0f18);border:1px solid #1d2535;border-radius:16px;padding:18px;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .has-mega:hover>.mega{display:grid}
+    .mega .col{background:linear-gradient(180deg,#0e1422,#0c111b);border:1px solid #1b2333;border-radius:12px;padding:14px}
+    .mega h4{margin:6px 0 8px;font-family:"Space Grotesk";font-size:15px;color:#eaf0ff}
+    .mega ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .mega a{color:#b9c2d3;font-size:14px}
+
+    .hero{padding:64px 0 24px;border-bottom:1px solid var(--border)}
+    .crumb{color:#a8b2c6;font-size:14px}
+    .title{font-family:"Space Grotesk";font-weight:700;font-size:clamp(30px,4.4vw,50px);margin:10px 0}
+    .lead{color:#c6cfdd;max-width:70ch}
+    .hero-wrap{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center}
+    .blob{width:100%;aspect-ratio:1/1;border-radius:40% 60% 50% 50%/60% 40% 60% 40%;display:grid;place-items:center;color:white}
+    .blob i{font-size:90px}
+
+    section{padding:52px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,#0c111b,#0a0f18);border:1px solid var(--border);border-radius:14px;padding:22px}
+    h3{font-family:"Space Grotesk";margin:0 0 12px}
+    ul{margin:0;padding-left:18px}
+    .faq{border-top:1px solid #1b2333}
+    .qa{border-bottom:1px solid #1b2333;padding:14px 0}
+    .qa h4{margin:0 0 6px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    footer{padding:26px 0;color:#9aa3b2;border-top:1px solid var(--border);font-size:14px}
+    @media(max-width:980px){
+      .menu{display:none}
+      .hero-wrap{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html#home"><span class="logo"></span><span>DF IT CENTRE</span></a>
+    <ul class="menu">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li class="has-mega">
+        <button type="button">Services <i class="ri-arrow-down-s-line"></i></button>
+
+        <div class="mega">
+          <div class="col">
+            <h4>Social Media Security</h4>
+            <ul>
+              <li><a href="service.html?slug=hacked-facebook-page-recovery">Hacked Facebook Page Recovery</a></li>
+              <li><a href="service.html?slug=hacked-facebook-account-recovery">Hacked Facebook Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-instagram-account-recovery">Hacked Instagram Account Recovery</a></li>
+              <li><a href="service.html?slug=hacked-youtube-channel-recovery">Hacked YouTube Channel Recovery</a></li>
+              <li><a href="service.html?slug=hacked-google-account-recovery">Hacked Google Account Recovery</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Social Media Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=fake-copyright-claim-restore">Fake Copyright Claim Restore</a></li>
+              <li><a href="service.html?slug=suspended-page-recovery">Suspended Page Recovery</a></li>
+              <li><a href="service.html?slug=business-manager-verification">Business Manager Verification</a></li>
+              <li><a href="service.html?slug=page-verification-badge">Page Verification (Blue/Gray Badge)</a></li>
+              <li><a href="service.html?slug=copyright-trademark-restore">Copyright + Trademark Restore</a></li>
+              <li><a href="service.html?slug=notable-permanent-blue-verification">Notable / Permanent Blue Verification</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Digital Marketing</h4>
+            <ul>
+              <li><a href="service.html?slug=instagram-marketing">Instagram Marketing</a></li>
+              <li><a href="service.html?slug=facebook-marketing">Facebook Marketing</a></li>
+              <li><a href="service.html?slug=youtube-marketing">YouTube Marketing</a></li>
+            </ul>
+            <h4 style="margin-top:12px">Web & Software Design & Development</h4>
+            <ul>
+              <li><a href="service.html?slug=responsive-website-design">Responsive Website Design</a></li>
+              <li><a href="service.html?slug=custom-web-applications">Custom Web Applications</a></li>
+              <li><a href="service.html?slug=software-development-erp-crm">Software Development (ERP, CRM, Business Tools)</a></li>
+              <li><a href="service.html?slug=mobile-app-development">Mobile App Development (Android / iOS / Cross‑platform)</a></li>
+              <li><a href="service.html?slug=ui-ux-design-prototyping">UI/UX Design & Prototyping</a></li>
+            </ul>
+            <h4 style="margin-top:12px">Cybersecurity Solutions</h4>
+            <ul>
+              <li><a href="service.html?slug=network-security-penetration-testing">Network Security & Penetration Testing</a></li>
+              <li><a href="service.html?slug=web-app-security-audits">Web & App Security Audits</a></li>
+              <li><a href="service.html?slug=malware-threat-detection">Malware & Threat Detection</a></li>
+              <li><a href="service.html?slug=data-protection-compliance">Data Protection & Compliance</a></li>
+              <li><a href="service.html?slug=secure-hosting-maintenance">Secure Hosting & Maintenance</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a class="btn btn-primary" href="index.html#get-started"><i class="ri-arrow-right-up-line"></i> Get Started</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<div class="hero">
+  <div class="container hero-wrap">
+    <div>
+      <div class="crumb"><a href="index.html#home">Home</a> / <a href="index.html#services">Services</a> / <span id="svcCategory">Category</span></div>
+      <h1 class="title" id="svcTitle">Service</h1>
+      <p class="lead" id="svcSummary">Loading description…</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="contact.html"><i class="ri-customer-service-2-line"></i> Get help</a>
+        <a class="btn" href="index.html#services"><i class="ri-arrow-left-line"></i> Back to services</a>
+      </div>
+    </div>
+    <div id="iconBlob" class="blob" aria-hidden="true" style="background: radial-gradient(70% 120% at 40% 30%, #ff6bff, #7c5cff 40%, #00d2ff 100%);">
+      <i id="svcIcon" class="ri-shield-check-line"></i>
+    </div>
+  </div>
+</div>
+
+
+<section>
+  <div class="container grid">
+    <div class="card">
+      <h3>What we do</h3>
+      <ul id="svcBullets"></ul>
+    </div>
+    <div class="card">
+      <h3>How it works</h3>
+      <ol id="svcSteps" style="margin:0;padding-left:18px"></ol>
+    </div>
+    <div class="card">
+      <h3>What we need from you</h3>
+      <ul id="svcReqs"></ul>
+      <div class="cta"><a class="btn" href="contact.html"><i class="ri-question-answer-line"></i> Ask a question</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container card">
+    <h3>FAQs</h3>
+    <div id="svcFaqs" class="faq"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container card">
+    <h3>Ready to start?</h3>
+    <p class="muted">Tell us a bit about your case. We’ll respond with next steps, timeline and quote.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="mailto:support@dfitcentre.com?subject=Service%20Inquiry"><i class="ri-mail-send-line"></i> Email us</a>
+      <a class="btn" href="contact.html"><i class="ri-chat-1-line"></i> Contact page</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <div>Copyright © 2025 DF IT CENTRE. All rights reserved.</div>
+    <div><a href="#">Terms of Use</a> · <a href="#">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+
+  const SERVICES = {
+
+    "hacked-facebook-page-recovery": {
+      cat:"Social Media Security", icon:"ri-facebook-circle-fill", color:"#2563eb",
+      title:"Hacked Facebook Page Recovery",
+      seo:"Recover compromised Facebook Pages safely and fast with DF IT CENTRE, ownership verification, access restore, and security hardening.",
+      summary:"We quickly restore your compromised Facebook Page with safe recovery, ownership validation and full post‑recovery hardening.",
+      bullets:[
+        "Incident triage and containment; remove malicious admins/apps",
+        "Ownership verification and case escalation with platform support",
+        "Restore publishing rights, remove hack‑related strikes where possible",
+        "Hardening: 2FA, admin hygiene, alerts and best practices"
+      ],
+      steps:["Case intake & risk isolation","Ownership validation + support ticket","Access restore & reset tokens/roles","Security hardening + final report"],
+      reqs:["Government ID or business docs","Page URL + connected profile URL","Email/phone used and any evidence/screenshots"],
+      faqs:[
+        ["How long does recovery take?","Most cases within 24–72h. Severe escalations may take 3–7 days."],
+        ["Do you need our password?","No. We use secure session links and guide you live; no credential storage."],
+        ["Can you restore pages disabled due to the hack?","If suspension is hack‑related, chances are good; policy violations are handled case‑by‑case."]
+      ]
+    },
+    "hacked-facebook-account-recovery":{
+      cat:"Social Media Security", icon:"ri-facebook-circle-fill", color:"#2563eb",
+      title:"Hacked Facebook Account Recovery",
+      seo:"Account compromised? DF IT CENTRE helps you regain access, clean sessions, enable 2FA and secure your Facebook profile.",
+      summary:"Regain control of your Facebook account, clean malicious sessions, enable strong 2FA and secure your identity.",
+      bullets:[
+        "Secure device check and session clean‑up",
+        "Identity verification and account unlock",
+        "Password reset + recovery info review",
+        "Security checklist: 2FA, trusted contacts, alerts"
+      ],
+      steps:["Immediate device/security check","ID verification and unlock","Credentials reset & session revoke","2FA setup + post‑incident guidance"],
+      reqs:["Photo ID","Account email/phone","Recent activity evidence (emails, screenshots)"],
+      faqs:[
+        ["Will messages and content be safe?","We focus on access first, then review content and privacy settings safely."],
+        ["What if email is also hacked?","We secure mail first (or temporary recovery channel), then fix the FB account."],
+        ["Do you assist with legal notices?","We can provide incident summaries for legal/insurance if needed."]
+      ]
+    },
+    "hacked-instagram-account-recovery":{
+      cat:"Social Media Security", icon:"ri-instagram-line", color:"#e1306c",
+      title:"Hacked Instagram Account Recovery",
+      seo:"Recover hacked Instagram accounts with DF IT CENTRE, secure restoration, identity validation and robust 2FA setup.",
+      summary:"We restore your Instagram account access, validate identity and lock down security to prevent repeat compromises.",
+      bullets:["Account ownership validation","Session revoke and credential reset","2FA app-based security and backup codes","Profile review: email/phone, linked accounts"],
+      steps:["Triage & phishing/malware check","Ownership proofs & restore","Credentials, 2FA & backup codes","Hardening & education"],
+      reqs:["IG handle + linked email/phone","Any recovery codes or proofs","Screenshots of alerts/phishing"],
+      faqs:[
+        ["Can you recover username changes?","Often yes if prompt; older changes depend on support review."],
+        ["Will my posts be removed?","We secure the account first; any harmful posts can be reversed/cleaned."],
+        ["Is 2FA mandatory?","Highly recommended; we help you set app‑based 2FA with backups."]
+      ]
+    },
+    "hacked-youtube-channel-recovery":{
+      cat:"Social Media Security", icon:"ri-youtube-fill", color:"#e11d1d",
+      title:"Hacked YouTube Channel Recovery",
+      seo:"Recover compromised YouTube channels safely. DF IT CENTRE restores access, cleans risks and re‑enables protections.",
+      summary:"Channel compromised? We restore access via Google Security Checkup, coordinate with YouTube support, and lock everything down.",
+      bullets:["Google account security checkup & token revoke","Brand/owner verification and support escalation","Restore videos/visibility and monetization status (where applicable)","2‑step verification and backup keys"],
+      steps:["Immediate risk isolation (devices, sessions)","Ownership validation & support ticket","Channel access restore & review","Security hardening + recovery report"],
+      reqs:["Channel URL + Google account email","Proof of ownership (Brand Account/ID)","Notices/emails about the incident"],
+      faqs:[
+        ["What about deleted videos?","Some can be restored depending on timeline; we escalate with support."],
+        ["Monetization affected?","We review policy/Ad‑friendly status and help with re‑application if needed."],
+        ["Need access to my Gmail?","We guide you to perform steps safely on your side; no password sharing."]
+      ]
+    },
+    "hacked-google-account-recovery":{
+      cat:"Social Media Security", icon:"ri-google-fill", color:"#34a853",
+      title:"Hacked Google Account Recovery",
+      seo:"DF IT CENTRE helps recover compromised Google accounts (Gmail, Workspace). Restore access and secure 2‑step verification.",
+      summary:"We help you regain Google account access (Gmail/Workspace), secure sessions, and enable strong 2‑step verification.",
+      bullets:["Identity verification flow & recovery options","Session/device cleanup and password reset","2‑Step Verification & recovery methods","Security posture review and guidance"],
+      steps:["Assessment & recovery options","Identity checks & unlock","Reset credentials & revoke sessions","2SV setup + post‑incident report"],
+      reqs:["Account email/phone","Any recovery codes/backup email","Incident evidence or alerts"],
+      faqs:[
+        ["Workspace account?","Yes, we coordinate with admins to restore safely."],
+        ["Phishing on device?","We scan and clean devices to avoid re‑compromise."],
+        ["Timeline?","Usually same‑day; complex cases 2–5 days."]
+      ]
+    },
+
+
+    "fake-copyright-claim-restore":{
+      cat:"Social Media Solutions", icon:"ri-copyright-line", color:"#7c5cff",
+      title:"Fake Copyright Claim Restore",
+      seo:"Remove false copyright claims with evidence‑backed appeals or counter‑notifications.",
+      summary:"We investigate the claim, prepare evidence and file appeals/counter‑notifications to restore your content safely.",
+      bullets:["Claim assessment & evidence collection","Prepare appeal or counter‑notification","Rights‑holder outreach and escalation","Content reinstatement guidance"],
+      steps:["Review notices & content","Compile proofs/licenses","File appeal/counter‑notice","Follow‑up & status updates"],
+      reqs:["Links to claimed content","Copy of notice/email","Licenses/ownership proofs"],
+      faqs:[
+        ["Counter‑notice risks?","We explain platform/legal implications before filing."],
+        ["How long to resolve?","Typically 3–10 business days; varies by platform/rights holder."],
+        ["Can you prevent repeats?","Yes, watermarking, documentation and brand monitoring tips."]
+      ]
+    },
+    "suspended-page-recovery":{
+      cat:"Social Media Solutions", icon:"ri-shield-keyhole-line", color:"#00d2ff",
+      title:"Suspended Page Recovery",
+      seo:"Assist with suspended/limited pages via policy‑compliant appeals and documentation.",
+      summary:"We prepare policy‑aligned appeals and documentation to restore suspended or restricted pages.",
+      bullets:["Root‑cause analysis of suspension","Appeal drafting with references","Identity/brand verification","Post‑restore policy checklist"],
+      steps:["Assess violation codes","Collect supporting docs","File appeal + escalation","Monitor & advise on compliance"],
+      reqs:["Page URL & admin info","Suspension emails/codes","Business/legal documents"],
+      faqs:[
+        ["Guaranteed restore?","We can't guarantee but maximize chances with proper documentation."],
+        ["How many appeals?","We handle multiple rounds as needed per scope."],
+        ["Future prevention?","We share a tailored compliance playbook."]
+      ]
+    },
+    "business-manager-verification":{
+      cat:"Social Media Solutions", icon:"ri-building-4-line", color:"#00bcd4",
+      title:"Business Manager Verification",
+      seo:"Guided Business Manager verification with correct documents, domain and security setup.",
+      summary:"We guide you through Business Manager verification, documents, domain verification and security best practices.",
+      bullets:["Eligibility check & document list","Domain verification + DNS setup","Two‑factor & admin policy hardening","Submission review & escalation"],
+      steps:["Pre‑check & prep docs","Domain/DNS verification","Security setup & review","Submit & follow‑up"],
+      reqs:["Gov/business registration","Domain/DNS access","Admin contact details"],
+      faqs:[
+        ["How long?","1–5 business days after submission."],
+        ["Rejected before?","We audit and fix gaps then re‑apply."],
+        ["Need domain email?","Recommended; we can help set it up."]
+      ]
+    },
+    "page-verification-badge":{
+      cat:"Social Media Solutions", icon:"ri-verified-badge-line", color:"#2dd4bf",
+      title:"Page Verification (Blue/Gray Badge)",
+      seo:"Prepare your presence for Page Verification, authenticity and notability readiness.",
+      summary:"We assess eligibility and prepare your profile, documents and PR presence for Blue/Gray badge applications.",
+      bullets:["Eligibility & gap analysis","Identity/legal documentation","Press/notability signals plan","Application guidance & follow‑up"],
+      steps:["Audit profile & presence","Collect proofs & assets","Strengthen notability signals","Apply & track"],
+      reqs:["ID/registration docs","Links to press/mentions","Domain email & website"],
+      faqs:[
+        ["Guaranteed badge?","No guarantees; we enhance eligibility and handle clean submission."],
+        ["How long?","Platform review times vary (1–4 weeks)."],
+        ["Notability lacking?","We craft a PR/brand build plan first."]
+      ]
+    },
+    "copyright-trademark-restore":{
+      cat:"Social Media Solutions", icon:"ri-file-shield-2-line", color:"#6ee7b7",
+      title:"Copyright + Trademark Restore",
+      seo:"Protect your IP: takedowns, reinstatements, and brand impersonation removal.",
+      summary:"We protect your IP with accurate takedowns, reinstatement requests and impersonation removals across platforms.",
+      bullets:["DMCA takedowns and counter‑notices","Trademark infringement reports","Impersonation & fake page removal","Portfolio of evidence & audit trail"],
+      steps:["Collect proofs & marks","File takedown/report","Follow‑up & coordinate","Document outcomes & monitor"],
+      reqs:["Registration/proof of ownership","Links to infringing content","Brand assets/logos"],
+      faqs:[
+        ["Do I need registration?","Helps a lot; we can still act with strong evidence."],
+        ["Multi‑platform cases?","Yes, we coordinate across networks."],
+        ["Recurring abuse?","We propose monitoring + rapid response plan."]
+      ]
+    },
+    "notable-permanent-blue-verification":{
+      cat:"Social Media Solutions", icon:"ri-medal-2-line", color:"#60a5fa",
+      title:"Notable / Permanent Blue Verification",
+      seo:"Build and apply for notable, permanent blue verification with proper signals.",
+      summary:"We create a notability roadmap and manage the verification request with compliant documentation.",
+      bullets:["Notability audit & plan","Press/knowledge graph improvements","Identity proofs & compliance","Application & escalation"],
+      steps:["Baseline audit","Signal building (press/PR)","Compile docs & apply","Track & strengthen profile"],
+      reqs:["Public facing portfolio","Press links or achievements","Government ID / org docs"],
+      faqs:[
+        ["Timeframe?","Usually 2–8 weeks depending on notability gap."],
+        ["Can individuals apply?","Yes, subject to policy eligibility."],
+        ["If declined?","We iterate with stronger signals before re‑apply."]
+      ]
+    },
+
+  
+    "instagram-marketing":{
+      cat:"Digital Marketing", icon:"ri-instagram-line", color:"#e1306c",
+      title:"Instagram Marketing",
+      seo:"Strategy, content and ads for growth on Instagram. Data‑driven execution.",
+      summary:"We craft IG strategy, content and ads focused on reach, retention and conversion.",
+      bullets:["Audit & strategy (niche, competitors)","Content calendar: posts, reels, stories","Paid ads, creator collabs, UGC","Analytics & A/B testing"],
+      steps:["Audit & goals","Strategy + calendar","Execution (organic + ads)","Optimize & scale"],
+      reqs:["Brand assets & access","Target audience & goals","Ad budget (optional)"],
+      faqs:[
+        ["How fast to see results?","First 2–4 weeks for baseline; compounding growth after."],
+        ["Do you design creatives?","Yes, with your brand kit."],
+        ["Can you do only organic?","Yes, we adapt to your plan."]
+      ]
+    },
+    "facebook-marketing":{
+      cat:"Digital Marketing", icon:"ri-facebook-circle-fill", color:"#2563eb",
+      title:"Facebook Marketing",
+      seo:"Campaign strategy, creatives and conversion tracking for Facebook.",
+      summary:"We run ROI‑focused Facebook marketing: optimized page, high‑performing creatives and conversion tracking.",
+      bullets:["Page optimization & shop setup","Funnel mapping and pixel events","Creative production & ad testing","Retargeting and look‑alikes"],
+      steps:["Discovery & setup","Campaign build","Run & iterate","Scale & report"],
+      reqs:["BM/Page access","Pixel + domain verify","Budget & KPIs"],
+      faqs:[
+        ["Can you manage comments?","Yes, with response guidelines."],
+        ["Attribution setup?","We configure CAPI/pixel events."],
+        ["Monthly reports?","Included with insights & actions."]
+      ]
+    },
+    "youtube-marketing":{
+      cat:"Digital Marketing", icon:"ri-youtube-fill", color:"#e11d1d",
+      title:"YouTube Marketing",
+      seo:"Channel optimization, content plan and ads for YouTube growth.",
+      summary:"We optimize your channel, plan content, make thumbnails and leverage search + ads for growth.",
+      bullets:["Channel SEO & metadata","Content calendar & hooks","Thumbnail system & A/B tests","Ads & cross‑promotion"],
+      steps:["Audit & goals","Optimize & plan","Publish & iterate","Scale + community"],
+      reqs:["Channel access","Brand kit & topics","Budget (optional)"],
+      faqs:[
+        ["Guarantee views?","No guarantees; we focus on repeatable systems."],
+        ["Shorts vs long‑form?","We balance based on niche and goals."],
+        ["Do you script?","Yes, light scripts + hooks."]
+      ]
+    },
+
+
+    "responsive-website-design":{
+      cat:"Web & Software Design & Development", icon:"ri-global-line", color:"#7c5cff",
+      title:"Responsive Website Design",
+      seo:"Modern responsive websites with speed, accessibility and SEO best practices.",
+      summary:"We design and build fast, responsive websites with clean UX and on‑page SEO.",
+      bullets:["Modern responsive UI","Performance & accessibility","CMS or static, as needed","On‑page SEO and tracking"],
+      steps:["Discovery & sitemap","Wireframe & design","Build & QA","Launch & training"],
+      reqs:["Brand kit, content outline","Domain/hosting access","Goals & references"],
+      faqs:[
+        ["Which stack?","Jamstack/Next.js, or CMS (WordPress/Headless) per need."],
+        ["Timeline?","2–6 weeks based on scope."],
+        ["Will you host?","We can host or handoff."]
+      ]
+    },
+    "custom-web-applications":{
+      cat:"Web & Software Design & Development", icon:"ri-window-line", color:"#00d2ff",
+      title:"Custom Web Applications",
+      seo:"Secure, scalable custom web apps, dashboards and portals.",
+      summary:"From dashboards to customer portals, we build secure, scalable web apps with great UX.",
+      bullets:["Requirements & architecture","APIs, auth & roles","Scalable infra & CI/CD","Observability & support"],
+      steps:["Scope & design","MVP build","Iterate & integrate","Launch & monitor"],
+      reqs:["Feature brief & flows","API/DB access (if any)","Stakeholder availability"],
+      faqs:[
+        ["Tech choices?","Node/Next/Nest, React, PostgreSQL, etc."],
+        ["Security posture?","OWASP, secrets mgmt, SSO options."],
+        ["Handover?","Docs, training and source code included."]
+      ]
+    },
+    "software-development-erp-crm":{
+      cat:"Web & Software Design & Development", icon:"ri-apps-2-line", color:"#22d3ee",
+      title:"Software Development (ERP, CRM, Business Tools)",
+      seo:"Custom ERP/CRM and internal tools tailored to your workflows.",
+      summary:"We deliver business software (ERP/CRM/tools) tailored to your processes, from discovery to rollout.",
+      bullets:["Process mapping & modules","Integrations (billing, email, SMS)","Role‑based access & audit logs","Change mgmt & training"],
+      steps:["Discovery workshops","Module design","Build & integrate","Deploy & train"],
+      reqs:["Process docs & KPIs","Data model/exports","Admin champions"],
+      faqs:[
+        ["On‑prem or cloud?","Both options supported."],
+        ["Migrations?","Yes, with validations/backups."],
+        ["Support SLA?","Available per plan."]
+      ]
+    },
+    "mobile-app-development":{
+      cat:"Web & Software Design & Development", icon:"ri-smartphone-line", color:"#34d399",
+      title:"Mobile App Development (Android / iOS / Cross‑platform)",
+      seo:"High‑quality mobile apps, native or cross‑platform, with strong UX and analytics.",
+      summary:"We build Android/iOS apps (native or cross‑platform) with polished UX and reliable releases.",
+      bullets:["React Native/Flutter or native","Secure auth & offline support","App store readiness & CI","Analytics & crash reporting"],
+      steps:["Scope & prototype","Build sprints","Beta & QA","Ship & iterate"],
+      reqs:["Feature list & designs","Store accounts","Backend/APIs"],
+      faqs:[
+        ["Cross‑platform vs native?","We advise per performance & budget."],
+        ["Push notifications?","Yes, with proper opt‑ins."],
+        ["App support?","Available as monthly care."]
+      ]
+    },
+    "ui-ux-design-prototyping":{
+      cat:"Web & Software Design & Development", icon:"ri-pantone-line", color:"#f472b6",
+      title:"UI/UX Design & Prototyping",
+      seo:"Research‑driven UX and beautiful UI, from wireframes to clickable prototypes.",
+      summary:"We design intuitive products via research, wireframes, high‑fidelity UI and interactive prototypes.",
+      bullets:["Research & persona mapping","User flows & wireframes","Design system & components","Clickable prototypes & specs"],
+      steps:["Discover & research","Structure & flows","Design system & screens","Prototype & handoff"],
+      reqs:["Product goals & audience","Brand kit (if any)","User interview access"],
+      faqs:[
+        ["Tools?","Figma as default. Can adapt."],
+        ["Usability testing?","Available, moderated/unmoderated."],
+        ["Design handoff?","Specs + assets + style guide."]
+      ]
+    },
+
+
+    "network-security-penetration-testing":{
+      cat:"Cybersecurity Solutions", icon:"ri-shield-keyhole-line", color:"#60a5fa",
+      title:"Network Security & Penetration Testing",
+      seo:"Comprehensive network pentests with clear, prioritized remediation steps.",
+      summary:"We perform scoped penetration tests and vulnerability assessments with actionable remediation.",
+      bullets:["Threat modeling & scope","External/internal testing","Exploitation & validation","Risk‑ranked report & retest"],
+      steps:["Scope & rules of engagement","Recon & scan","Exploit & validate","Report & fixes"],
+      reqs:["Targets & ranges","Access/whitelisting (if needed)","Technical contact"],
+      faqs:[
+        ["Impact on systems?","Non‑disruptive by default; safe windows for intrusive tests."],
+        ["Compliance mapping?","Reports map to OWASP/NIST/CIS."],
+        ["Do you retest?","Included with remediation window."]
+      ]
+    },
+    "web-app-security-audits":{
+      cat:"Cybersecurity Solutions", icon:"ri-bug-line", color:"#7c5cff",
+      title:"Web & App Security Audits",
+      seo:"OWASP‑aligned security reviews for web and mobile apps.",
+      summary:"We audit apps against OWASP with SAST/DAST, config checks and secure coding guidance.",
+      bullets:["OWASP Top‑10 testing","SAST/DAST & dependency checks","Auth/session & access control review","Cloud/config hardening review"],
+      steps:["Plan & access","Automated + manual tests","Findings & risk rating","Fix guidance & verification"],
+      reqs:["Staging access/APIs","Test accounts/roles","Architecture docs (optional)"],
+      faqs:[
+        ["Source code access?","Preferred for deeper findings."],
+        ["Timeframe?","1–2 weeks typical per app."],
+        ["Certificate pinning?","We handle via test builds/proxies."]
+      ]
+    },
+    "malware-threat-detection":{
+      cat:"Cybersecurity Solutions", icon:"ri-virus-line", color:"#ef4444",
+      title:"Malware & Threat Detection",
+      seo:"Detect, remove and prevent malware with incident response support.",
+      summary:"We detect and eradicate malware, investigate IOCs and establish continuous threat monitoring.",
+      bullets:["IR triage & evidence capture","Malware cleanup & recovery","EDR setup & alerting","Hardening & training"],
+      steps:["Contain & collect IOCs","Clean & restore","Deploy monitoring","Post‑incident review"],
+      reqs:["System/hosting access","Logs & timestamps","Affected file samples"],
+      faqs:[
+        ["Website hacked?","We clean and harden CMS/servers."],
+        ["Ransomware?","Coordinate safely with IR best practices."],
+        ["Long‑term monitoring?","Yes, managed detection available."]
+      ]
+    },
+    "data-protection-compliance":{
+      cat:"Cybersecurity Solutions", icon:"ri-lock-2-line", color:"#22c55e",
+      title:"Data Protection & Compliance",
+      seo:"Policies, DPA, DPIA and controls aligned to GDPR and local laws.",
+      summary:"We help you implement data protection policies, DPA/DPIA, encryption and IAM controls aligned to regulations.",
+      bullets:["Policy & data mapping","Encryption & retention controls","Access/IAM governance","DPIA & vendor risk reviews"],
+      steps:["Assess & map data","Define controls","Implement & train","Audit & improve"],
+      reqs:["Process owners & systems","Vendor list/contracts","Executive sponsor"],
+      faqs:[
+        ["Do you certify?","We prepare you for audits; certification via bodies."],
+        ["SMB friendly?","We right‑size controls to your scale."],
+        ["Employee training?","Included modules available."]
+      ]
+    },
+    "secure-hosting-maintenance":{
+      cat:"Cybersecurity Solutions", icon:"ri-server-line", color:"#38bdf8",
+      title:"Secure Hosting & Maintenance",
+      seo:"Hardened hosting, backups, monitoring and patch management.",
+      summary:"We provide secure hosting with backups, monitoring and patching, keeping your stack healthy.",
+      bullets:["Hardened servers & WAF","Backups & disaster recovery drills","Monitoring/alerts & uptime SLAs","Patching & vulnerability mgmt"],
+      steps:["Provision & harden","Migrate/deploy","Monitor & maintain","Review & optimize"],
+      reqs:["Domain/DNS access","App/DB access (if migrating)","Uptime & RPO/RTO goals"],
+      faqs:[
+        ["Which cloud?","AWS/DO/Vercel/Netlify, per workload."],
+        ["24/7 support?","Available with premium SLA."],
+        ["Data residency?","We deploy in your preferred region."]
+      ]
+    }
+  };
+
+
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('slug');
+  const svc = SERVICES[slug];
+
+  const $ = (id)=>document.getElementById(id);
+  function list(elId, items){ $(elId).innerHTML = items.map(i=>`<li>${i}</li>`).join(''); }
+  function faqs(elId, pairs){
+    $(elId).innerHTML = pairs.map(([q,a])=>`<div class="qa"><h4>${q}</h4><p class="muted">${a}</p></div>`).join('');
+  }
+
+  if(!svc){
+    document.title = "Service not found, DF IT CENTRE";
+    $("svcTitle").textContent = "Service not found";
+    $("svcSummary").textContent = "The service you’re looking for does not exist. Browse all services below.";
+    $("svcCategory").textContent = "Services";
+    $("iconBlob").style.background = "radial-gradient(70% 120% at 40% 30%, #ff6b6b,#f59e0b 40%, #10b981 100%)";
+    $("svcIcon").className = "ri-compass-3-line";
+    const all = Object.entries(SERVICES).map(([k,v])=>`<li><a href="service.html?slug=${k}">${v.title}</a></li>`).join('');
+    const extra = document.createElement('section'); extra.innerHTML = `<div class="container card"><h3>All services</h3><ul>${all}</ul></div>`;
+    document.body.insertBefore(extra, document.querySelector('#contact'));
+  }else{
+
+    document.title = `${svc.title}  DF IT CENTRE`;
+    document.querySelector('meta[name="description"]').setAttribute('content', svc.seo || svc.summary);
+    const canon = `${location.origin}${location.pathname}?slug=${slug}`;
+    const canEl = document.getElementById('canonical'); if(canEl) canEl.href = canon;
+
+
+    $("svcTitle").textContent = svc.title;
+    $("svcSummary").textContent = svc.summary;
+    $("svcCategory").textContent = svc.cat;
+    $("svcIcon").className = svc.icon;
+    $("iconBlob").style.background = `radial-gradient(70% 120% at 40% 30%, ${svc.color}, #7c5cff 40%, #00d2ff 100%)`;
+
+    list("svcBullets", svc.bullets || []);
+    list("svcSteps", svc.steps || []);
+    list("svcReqs", svc.reqs || []);
+    faqs("svcFaqs", svc.faqs || []);
+  }
+  // After svc is loaded
+const set = (sel,val)=>{ const el=document.querySelector(sel); if(el) el.setAttribute('content', val); };
+set('meta[property="og:title"]', `${svc.title} DF IT CENTRE`);
+set('meta[name="twitter:title"]',  `${svc.title} DF IT CENTRE`);
+set('meta[property="og:description"]', svc.seo || svc.summary);
+set('meta[name="twitter:description"]', svc.seo || svc.summary);
+// Optional image per service:
+set('meta[property="og:image"]', 'https://dfitofficial.com/og-image.jpg');
+set('meta[name="twitter:image"]',  'https://dfitofficial.com/og-image.jpg');
+</script>
+</body>
+</html>
