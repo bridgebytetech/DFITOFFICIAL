@@ -311,8 +311,8 @@
   const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target)}}),{threshold:.2});
   document.querySelectorAll('.reveal, section .container').forEach(el=>io.observe(el));
 
-  // Email fallback (edit the email below)
-  const CONTACT_EMAIL = 'hello@dfitcentre.com'; // TODO: replace with your email
+  // Email fallback 
+  const CONTACT_EMAIL = 'support@dfitcentre.com'; 
 
   function sendEmail(e){
     e.preventDefault();
@@ -344,6 +344,7 @@ Consent: ${document.getElementById('agree').checked ? 'Yes' : 'No'}`);
 </body>
 
 </html>
+
 
 
 
